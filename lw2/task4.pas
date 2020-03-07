@@ -1,43 +1,33 @@
 PROGRAM WorkWithQueryString(INPUT, OUTPUT);
 USES
   DOS;
-var
+VAR
   Query: STRING;
 FUNCTION GetQueryStringParameter(Key: STRING): STRING;
 VAR
-  a, b, c, i, equal, ampersand: byte;
-  s: STRING;
+  a, i, ampersand: BYTE;
+  word, name: STRING;
 BEGIN 
   a := POS(Key, Query);
-  equal := POS('=', Query);
-  IF (Key = 'first_name') AND (a <> 0)
+  name := COPY(Query, 1, POS('=', Query)-1);
+  IF (name <> Key)
   THEN
-    BEGIN 
-      DELETE(Query, a, equal);
-      ampersand := POS('&', Query);
-      s := COPY(Query, 1, ampersand-1);
-      DELETE(Query, 1, ampersand);
-    END
+    BEGIN
+      DELETE(Query, 1, POS('&', Query));
+      word := ''
+    END 
   ELSE
-    
-  IF (Key = 'last_name') and (a+9 = POS('=', Query))
-  then
-    begin 
-  DELETE(Query, 1, POS('=', Query));
-  ampersand := POS('&', Query);
-  s := COPY(Query, 1, ampersand-1);
-  DELETE(Query, 1, ampersand)
-  end;
-  if (Key = 'age') and (a+3 = POS('=', Query))
-  then
-    begin 
-  DELETE(Query, 1, POS('=', Query));
-  ampersand := POS('&', Query);
-  s := COPY(Query, 1, length(Query));
-  DELETE(Query, 1, ampersand);
-  end;
-  GetQueryStringParameter := s
-  
+    IF (a <> 0) 
+    THEN
+      BEGIN
+        DELETE(Query, 1, POS('=', Query));
+        ampersand := POS('&', Query);
+        word := COPY(Query, 1, LENGTH(Query));
+        for i := 1 to ampersand do
+        word := COPY(Query, 1, ampersand-1);
+        DELETE(Query, 1, ampersand);
+      END;  
+  GetQueryStringParameter := word;    
 END;
 BEGIN {WorkWithQueryString}
   WRITELN('Content-Type: text/plain');
