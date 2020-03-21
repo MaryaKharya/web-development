@@ -1,0 +1,136 @@
+.image
+{
+    width: 330px;
+    height: 390px;
+    border-radius: 5px;
+    margin: 111 px  0  0  0;
+}
+
+.h1
+{
+
+    font: 700 48px Open Sans;
+    color: #333333;
+}
+
+.quote
+{
+    display: inline;
+    position: absolute;
+}
+
+.vitae
+{
+
+    font: 19px/32px Georgia;
+    color: #555555;
+}
+
+.hobby
+{
+    font: 19px/32px Georgia;
+    color: #555555;
+}
+
+.h2_1
+{
+    font: 400 36px/42px Open Sans;
+    color: #333333;
+}
+
+.link
+{
+    font: 19px/32px Georgia;
+    color: #15a98b;
+}
+
+.title_list_1
+{
+    font: 600 24px/32px Open Sans;
+    color: #15a98c;
+
+}
+
+.title_list_2
+{
+    padding: 60px 0 0 0;
+    font: 600 24px/32px Open Sans;
+    color: #15a98c;
+}
+
+
+.list_1
+{
+    font: 19px/36px Georgia;
+    color: #555555;
+}
+
+.list_2
+{
+    font: 19px/36px Georgia;
+    color: #555555;
+}
+
+.cont 
+{
+
+    width: 960px;
+    max-width: 960px; 
+    margin:  0 auto;
+}
+
+.header
+{
+    margin: 50px;
+}
+
+.d
+{
+    margin: 120px;
+    color: #848484;
+    font: italic 28px/42px Georgia;
+}
+.quotes
+{
+    position: absolute;
+    margin: 51px 0 0 60px;
+}
+
+.header_2
+{
+
+    margin: -50px 50px 0 50px;
+}
+
+.q
+{
+    margin: -45px -89px 0 0;
+    width: 561px;
+    height: 198px;
+    display: inline;
+    float: right;
+}
+
+.interests
+{
+    width: 330px;
+    height: 260px;
+    display: inline;
+}
+
+ul
+{
+    margin: -5px 0 0 0;
+    font: 19px/1.15 Georgia
+}
+
+.li
+{
+    margin: 15px 0 0 -17px;
+}
+
+ol
+{
+    margin: -10px 0 0 -5px;
+}
+
