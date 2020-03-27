@@ -1,21 +1,25 @@
 <?php
 
 header("Content-Type: text/plain");
-$ident = $_GET['identifier'];
-$letter = $ident{0}; 
-if (preg_match("/^[aA-zZ0-9]+$/",$ident)) 
+if ($_GET['identifier'])
 {
-    if (preg_match('/[a-zA-Z]/', $letter))
+    $ident = $_GET['identifier'];
+    $letter = $ident{0};
+    echo "Does the string match the identifier? "; 
+    if (preg_match("/^[aA-zZ0-9]+$/",$ident)) 
     {
-        echo 'Yes, first symbol is a letter and string contains only numbers and letters.' ;
-    }
+        if (preg_match('/[a-zA-Z]/', $letter))
+        { 
+            echo "Yes, first symbol is a letter and string contains only numbers and letters." ;
+        }
+        else
+        {  
+            echo "No, first symbol is a number.";
+        }  
+    }                                     
     else
-    {  
-        echo 'No, first symbol is a number.';
+    {
+        echo "No, string contains other symbols. ";
     }
-}                                     
-else
-{
-   echo "No, string contains other symbols. ";
 }                       
 ?>
