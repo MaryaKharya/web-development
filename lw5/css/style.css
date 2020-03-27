@@ -1,3 +1,18 @@
+@font-face
+{
+    font-family: Georgia; 
+    src: url(fonts/Georgia Regular.ttf);
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: Georgia; 
+    src: url(fonts/Georgia Italic.ttf);
+    font-style: italic;
+}
+
+
 .image
 {
     width: 330px;
@@ -13,124 +28,295 @@
     color: #333333;
 }
 
-.quote
-{
-    display: inline;
-    position: absolute;
-}
 
 .vitae
 {
-
+    position: relative;
+    top: -12px;
+    left: 14px;
     font: 19px/32px Georgia;
     color: #555555;
 }
 
 .hobby
 {
+    position: relative;
+    left: 13px;
+    top: -14px;
     font: 19px/32px Georgia;
     color: #555555;
 }
 
-.h2_1
+h2
 {
     font: 400 36px/42px Open Sans;
     color: #333333;
 }
 
+.Marya_Harya
+{
+    position: relative;
+    left: 11px;
+}
+
 .link
 {
+    position: relative;
+    left: 13px;
+    top: 9px;
     font: 19px/32px Georgia;
     color: #15a98b;
 }
 
-.title_list_1
+.title_list
 {
     font: 600 24px/32px Open Sans;
     color: #15a98c;
-
 }
 
-.title_list_2
+.indent_list
 {
-    padding: 60px 0 0 0;
-    font: 600 24px/32px Open Sans;
-    color: #15a98c;
+    margin-top: 52px
 }
 
 
-.list_1
+body
 {
-    font: 19px/36px Georgia;
-    color: #555555;
+    padding: 0; 
+    margin: 0; 
 }
-
-.list_2
-{
-    font: 19px/36px Georgia;
-    color: #555555;
-}
-
 .cont 
 {
-
-    width: 960px;
-    max-width: 960px; 
-    margin:  0 auto;
+    margin: 0 auto;
 }
 
-.header
+header
 {
-    margin: 50px;
+    position: relative;
+    top: -19px;
+    left: 480px;
 }
 
-.d
+.header_1
 {
-    margin: 120px;
-    color: #848484;
+    position: relative;
+    top: -236px;
+    left: 480px;
+}
+
+.quote
+{
+    position: relative;
+    top: -334px;
+    left: 60px;
     font: italic 28px/42px Georgia;
-}
-.quotes
-{
-    position: absolute;
-    margin: 51px 0 0 60px;
+    color: #ffffff;
+    display: inline;
+    width: 520px;
 }
 
-.header_2
+.author
 {
-
-    margin: -50px 50px 0 50px;
+    position: relative;
+    top: -308px;
+    left: 415px;
+    width: 204px;
+    color: #f5f5f5;
+    font: 600 16px/42px "Open Sans";
 }
 
-.q
+
+.about_me
 {
-    margin: -45px -89px 0 0;
+    margin: -526px -75px 0 0;
     width: 561px;
     height: 198px;
-    display: inline;
     float: right;
 }
 
-.interests
+.lists
 {
     width: 330px;
     height: 260px;
     display: inline;
+    position: relative;
+    left: 479px; 
+    top: -285px;
 }
 
 ul
 {
-    margin: -5px 0 0 0;
-    font: 19px/1.15 Georgia
+    margin: -11px -16px;
 }
 
-.li
+li
 {
-    margin: 15px 0 0 -17px;
+    width: 330px;
+    font: 19px/36px "Georgia";
+    color: #555555;
 }
 
 ol
 {
-    margin: -10px 0 0 -5px;
+    margin-left: -20px;
+    margin-top: -13px;
 }
 
+.line
+{
+    position: relative;
+    top: -27px;
+    left: 10px;
+}
+
+.about_me_button:before
+{
+    content: "";
+    background: url(../images/about_me_icon.png);
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.hobby_button:before
+{
+    content: "";
+    background: url(../images/hobby_icon.png);
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-right: 11px;
+    margin-left: 16px;
+}
+
+.video_button:before
+{
+    content: "";
+    background: url(../images/video_icon.png);
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-left: 36px;
+    margin-right: 11px;
+}
+
+.menu
+{
+    font: 19px/32px "Georgia";
+    color: #333333;
+    display: inline-block;
+}
+
+.menu_color
+{
+    font: 19px/32px "Georgia";
+    color: #f5f5f5;
+    display: inline-block;
+    background-color: #15a98c;
+    padding: 10px 21px;
+}
+
+.background
+{
+    height: 400px;
+    width: 1920px;
+    position: relative;
+    top: -40px;
+}
+
+.about_films
+{
+    position: relative;
+    top: -192px;
+    left: 360px;
+
+}
+
+.photo_film
+{
+    width: 285px;
+    height: 190px;
+    border-radius: 5px;
+    background-color: #464646;
+}
+
+h4
+{
+    font: 700 22px/32px "Open Sans";
+    color: #333333;
+    position: relative;
+    top: -11px;
+    left: -1px;
+}
+
+.content
+{
+    font: 16px/28px "Georgia";
+    color: #555555;
+    width: 283px;
+    margin-top: -24px;
+}
+
+.host
+{
+    display: inline-block;
+    margin-right: 16px;
+    position: relative;
+    top: -50px;
+}
+
+.mo_dao_zu_shi
+{
+    display: inline-block;
+    margin-right: 16px;
+    position: relative;
+    top: 5px;
+}
+
+.atlantean
+{
+    display: inline-block;
+    margin-right: 16px;
+    position: relative;
+    top: -80px;
+}
+
+.outlander
+{
+    display: inline-block;
+    margin-right: 16px;
+    position: relative;
+    top: -80px;
+}
+
+.all_films_button
+{
+    border-radius: 5px;
+    background-color: #15a98c;
+    font: 19px/32px "Georgia";
+    color: #f5f5f5;
+    position: relative;
+    top: 98px;
+    left: 478px;
+    padding: 8px 55px;
+}
+
+footer
+{
+    background: #f5f5f5;
+    height: 68px;
+    width: 1920px;
+    position: relative;
+    top: -20px;
+}
+
+.footer
+{
+    position: relative;
+    left: 594px;
+    top: 17px;
+    font: 16px/32px "Georgia";
+    color: #555555;
+    margin-top: -1px;
+}
