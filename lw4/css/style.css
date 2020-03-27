@@ -1,0 +1,127 @@
+.image
+{
+    position: absolute;
+    left: 480px;
+    top: 100px;
+    width: 330px;
+    height: 350px;
+    border-radius: 5px;
+    background-color: #132d36;
+}
+
+.h1
+{
+    position: absolute;
+    left: 870px;
+    top: 500px;
+    font: 700 42px/42px Open Sans;
+    color: #333333;
+}
+
+.quote
+{
+    position: absolute;
+    left: 928px;
+    top: 229px;
+    width: 500px;
+    height: 470px;
+    color: #848484;
+    font: italic 28px/42px Georgia;
+}
+
+.vitae
+{
+    position: absolute;
+    left: 869px;
+    top: 626px;
+    width: 561px;
+    height: 198px;
+    font: 19px/32px Georgia;
+    color: #555555;
+}
+
+.hobby
+{
+    position: absolute;
+    left: 869px;
+    top: 917px;
+    width: 561px;
+    height: 198px;
+    font: 19px/32px Georgia;
+    color: #555555;
+}
+
+.h2_1
+{
+    position: absolute;
+    left: 871px;
+    top: 859px;
+    font: 400 36px/42px Open Sans;
+    color: #333333;
+}
+
+.link
+{
+    position: absolute;
+    left: 870px;
+    top: 1119px;
+    width: 562px;
+    height: 263px;
+    font: 19px/32px Georgia;
+    color: #15a98b;
+}
+
+.title_list_1
+{
+    position: absolute;
+    top: 500px;
+    left: 480px;
+    font: 600 24px/32px Open Sans;
+    color: #15a98c;
+}
+
+.title_list_2
+{
+    position: absolute;
+    top: 732px;
+    left: 480px;
+    font: 600 24px/32px Open Sans;
+    color: #15a98c;
+}
+
+
+.list_1
+{
+    position: absolute;
+    left: 480px;
+    top: 550px;
+    width: 330px;
+    height: 260px;
+    font: 19px/36px Georgia;
+    color: #555555;
+}
+
+.list_2
+{
+    position: absolute;
+    left: 480px;
+    top: 780px;
+width: 330px;
+height: 260px;
+font: 19px/36px Georgia;
+color: #555555;
+}
+
+.cont {
+  padding: 100px 460px;
+  width: 960px;
+  max-width: 960px; 
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header
+{
+    padding: 100px 460px
+    margin: 50px 
+}
