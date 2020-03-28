@@ -127,10 +127,11 @@ header
 
 .about_me
 {
-    margin: -526px -75px 0 0;
+    position: relative;
+    top: -510px;
+    left: 857px;
     width: 561px;
     height: 198px;
-    float: right;
 }
 
 .lists
