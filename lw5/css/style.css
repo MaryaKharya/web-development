@@ -255,39 +255,36 @@ h4
     font: 16px/28px "Georgia";
     color: #555555;
     width: 283px;
-    margin-top: -24px;
+    position: relative;
+    top: -22px;
 }
 
 .host
 {
-    display: inline-block;
-    margin-right: 16px;
     position: relative;
-    top: -50px;
+    top: 4px;
 }
 
 .mo_dao_zu_shi
 {
-    display: inline-block;
-    margin-right: 16px;
     position: relative;
-    top: 5px;
+    top: -688px;
+    left: 305px;
 }
 
 .atlantean
 {
-    display: inline-block;
-    margin-right: 16px;
     position: relative;
-    top: -80px;
+    top: -1437px;
+    left: 610px;
 }
 
 .outlander
 {
-    display: inline-block;
-    margin-right: 16px;
+
     position: relative;
-    top: -80px;
+    top: -2100px;
+    left: 916px;
 }
 
 .all_films_button
@@ -297,7 +294,7 @@ h4
     font: 19px/32px "Georgia";
     color: #f5f5f5;
     position: relative;
-    top: 98px;
+    top: -1950px;
     left: 478px;
     padding: 8px 55px;
 }
@@ -308,7 +305,7 @@ footer
     height: 68px;
     width: 1920px;
     position: relative;
-    top: -20px;
+    top: -2295px;
 }
 
 .footer
