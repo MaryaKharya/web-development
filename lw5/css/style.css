@@ -31,7 +31,7 @@
 .vitae
 {
     position: relative;
-    top: -12px;
+    top: -6px;
     left: 14px;
     font: 19px/32px Georgia;
     color: #555555;
@@ -138,10 +138,10 @@ header
 {
     width: 330px;
     height: 260px;
-    display: inline;
+    display: inline-block;
     position: relative;
     left: 479px; 
-    top: -285px;
+    top: -560px;
 }
 
 ul
@@ -228,7 +228,7 @@ ol
 .about_films
 {
     position: relative;
-    top: -192px;
+    top: -414px;
     left: 360px;
 
 }
