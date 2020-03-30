@@ -1,49 +1,38 @@
-@font-face
-{
-    font-family: Georgia; 
-    src: url(fonts/Georgia Regular.ttf);
-    font-style: normal;
-}
-
-@font-face
-{
-    font-family: Georgia; 
-    src: url(fonts/Georgia Italic.ttf);
-    font-style: italic;
-}
-
-
 .image
 {
     width: 330px;
     height: 390px;
     border-radius: 5px;
-    margin: 111 px  0  0  0;
+    float: left;
 }
 
-.h1
+h1
 {
+    margin: 0px;
+}
+
+.name
+{
+
     font: 700 48px Open Sans;
     color: #333333;
+    margin-left: -10px;
 }
 
 
 .vitae
 {
-    position: relative;
-    top: -6px;
-    left: 14px;
     font: 19px/32px Georgia;
     color: #555555;
+    margin-top: 37px;
 }
 
 .hobby
 {
-    position: relative;
-    left: 13px;
-    top: -14px;
     font: 19px/32px Georgia;
     color: #555555;
+    margin-top: -15px;
+    margin-left: 2px;
 }
 
 h2
@@ -52,17 +41,27 @@ h2
     color: #333333;
 }
 
-.Marya_Harya
+.marya_harya
 {
-    position: relative;
-    left: 11px;
+    margin-top: 45px;
 }
 
 .link
 {
-    position: relative;
-    left: 13px;
-    top: 9px;
+    font: 19px/32px Georgia;
+    color: #15a98b;
+    margin-top: -300px;
+    margin-left: 2px;
+}
+
+.link:hover
+{
+    color: #2E8B57;
+}
+
+.indent_link
+{
+    margin-top: 45px;
     font: 19px/32px Georgia;
     color: #15a98b;
 }
@@ -71,77 +70,73 @@ h2
 {
     font: 600 24px/32px Open Sans;
     color: #15a98c;
+    margin-left: -1px;
 }
 
 .indent_list
 {
-    margin-top: 52px
+    margin-top: 56px;
 }
 
 
 body
 {
-    padding: 0; 
-    margin: 0; 
-}
-.cont 
-{
     margin: 0 auto;
 }
 
-header
+.cont
 {
-    position: relative;
-    top: -19px;
-    left: 480px;
+    min-width: 1024px;
 }
 
-.header_1
+
+header
 {
-    position: relative;
-    top: -236px;
-    left: 480px;
+    margin-left: 160px;
+}
+
+.main
+{
+    margin-top: 218px;
+    margin-left: 148px;
+}
+
+.quote_and_author
+{
+    display: inline-block;
+    margin-left: 60px;
 }
 
 .quote
 {
-    position: relative;
-    top: -334px;
-    left: 60px;
     font: italic 28px/42px Georgia;
     color: #ffffff;
-    display: inline;
-    width: 520px;
+    margin-top: 25px;
 }
 
 .author
 {
-    position: relative;
-    top: -308px;
-    left: 415px;
     width: 204px;
     color: #f5f5f5;
     font: 600 16px/42px "Open Sans";
+    margin-top: -25px;
 }
 
 
 .about_me
 {
-    position: relative;
-    top: -510px;
-    left: 857px;
+    float: right;
+    display: inline-block;
     width: 561px;
-    height: 198px;
+    margin-right: 160px;
+    margin-top: 95px;
 }
 
 .lists
 {
+    display: block;
     width: 330px;
-    height: 260px;
-    display: inline-block;
-    position: relative;
-    left: 479px; 
-    top: -560px;
+    padding-top: 285px;
 }
 
 ul
@@ -158,15 +153,13 @@ li
 
 ol
 {
-    margin-left: -20px;
-    margin-top: -13px;
+    margin-left: -22px;
+    margin-top: -12px;
 }
 
 .line
 {
-    position: relative;
-    top: -27px;
-    left: 10px;
+    margin-top: 19px;
 }
 
 .about_me_button:before
@@ -176,7 +169,7 @@ ol
     display: inline-block;
     height: 15px;
     width: 15px;
-    margin-right: 10px;
+    margin-right: 9px;
 }
 
 .hobby_button:before
@@ -187,7 +180,6 @@ ol
     height: 15px;
     width: 15px;
     margin-right: 11px;
-    margin-left: 16px;
 }
 
 .video_button:before
@@ -197,40 +189,33 @@ ol
     display: inline-block;
     height: 15px;
     width: 15px;
-    margin-left: 36px;
     margin-right: 11px;
 }
 
 .menu
 {
+    margin: 0px;
+    margin-right: 28px;
+    padding-left: 9px;
+    padding-top: 10px;
     font: 19px/32px "Georgia";
     color: #333333;
     display: inline-block;
 }
 
-.menu_color
-{
-    font: 19px/32px "Georgia";
-    color: #f5f5f5;
-    display: inline-block;
-    background-color: #15a98c;
-    padding: 10px 21px;
-}
+
 
 .background
 {
-    height: 400px;
-    width: 1920px;
-    position: relative;
-    top: -40px;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat; 
+    background-position: center 50px;
 }
 
 .about_films
 {
-    position: relative;
-    top: -414px;
-    left: 360px;
-
+    margin-left: 27px;
+    margin-top: 120px;
 }
 
 .photo_film
@@ -239,15 +224,15 @@ ol
     height: 190px;
     border-radius: 5px;
     background-color: #464646;
+    margin-top: 3px;
 }
 
 h4
 {
     font: 700 22px/32px "Open Sans";
     color: #333333;
-    position: relative;
-    top: -11px;
-    left: -1px;
+    margin-top: 20px;
+    margin-left: -1px;
 }
 
 .content
@@ -255,37 +240,37 @@ h4
     font: 16px/28px "Georgia";
     color: #555555;
     width: 283px;
-    position: relative;
-    top: -22px;
+    margin-top: -12px;
 }
 
 .host
 {
-    position: relative;
-    top: 4px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
 }
 
 .mo_dao_zu_shi
 {
-    position: relative;
-    top: -688px;
-    left: 305px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
 }
 
 .atlantean
 {
-    position: relative;
-    top: -1437px;
-    left: 610px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
 }
 
 .outlander
 {
-
-    position: relative;
-    top: -2100px;
-    left: 916px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
 }
+
 
 .all_films_button
 {
@@ -293,27 +278,22 @@ h4
     background-color: #15a98c;
     font: 19px/32px "Georgia";
     color: #f5f5f5;
-    position: relative;
-    top: -1950px;
-    left: 478px;
     padding: 8px 55px;
+    margin-top: 100px;
+    margin-left: 477px;
 }
 
 footer
 {
     background: #f5f5f5;
-    height: 68px;
-    width: 1920px;
-    position: relative;
-    top: -2295px;
+    height: 70px;
+    margin-top: 70px;
 }
 
 .footer
 {
-    position: relative;
-    left: 594px;
-    top: 17px;
     font: 16px/32px "Georgia";
     color: #555555;
-    margin-top: -1px;
+    padding-top: 20px;
+    margin-left: 260px;
 }
