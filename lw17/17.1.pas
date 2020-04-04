@@ -5,7 +5,7 @@ PROCEDURE ReadDigit(VAR InF: TEXT; VAR Digit: INTEGER);
 VAR
   Ch: CHAR;
 BEGIN
-  Digit := 0;
+  Digit := -1;
   IF NOT EOLN(InF)
   THEN
     BEGIN
@@ -24,6 +24,7 @@ BEGIN
     END  
 END;
 BEGIN
+  Sum := 0;
   ReadDigit(INPUT, Digit);
   IF Digit <> -1
   THEN
