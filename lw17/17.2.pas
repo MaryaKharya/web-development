@@ -5,7 +5,7 @@ PROCEDURE ReadDigit(VAR InF: TEXT; VAR Digit: INTEGER);
 VAR
   Ch: CHAR;
 BEGIN
-  Digit := 0;
+  Digit := -1;
   IF NOT EOLN(InF)
   THEN
     BEGIN
@@ -36,7 +36,7 @@ BEGIN
       ReadDigit(FileIn, Digit);          
       IF (Digit <> -1) AND (Number <> -1)
       THEN
-        IF (Number < (MAXINT DIV 10)) AND ((Digit <= (MAXINT MOD 10)) OR (Number = (MAXINT DIV 10)))
+        IF (Number < (MAXINT DIV 10)) OR ((Digit < (MAXINT MOD 10)) AND (Number = (MAXINT DIV 10)))
         THEN 
           Number := Number * 10 + Digit
         ELSE
