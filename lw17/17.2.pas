@@ -30,17 +30,15 @@ VAR
   Digit: INTEGER;
 BEGIN
   Number := 0;
-  WHILE (NOT EOLN(FileIn)) AND (Digit <> -1)
+  ReadDigit(FileIn, Digit);
+  WHILE (Digit <> -1) AND (Number <> -1)
   DO
-    BEGIN
-      ReadDigit(FileIn, Digit);          
-      IF (Digit <> -1) AND (Number <> -1)
-      THEN
-        IF (Number < (MAXINT DIV 10)) OR ((Digit < (MAXINT MOD 10)) AND (Number = (MAXINT DIV 10)))
-        THEN 
-          Number := Number * 10 + Digit
-        ELSE
-          Number := -1           
+    BEGIN        
+      IF (Number < (MAXINT DIV 10)) OR ((Digit <= (MAXINT MOD 10)) AND (Number = (MAXINT DIV 10)))
+      THEN 
+        Number := Number * 10 + Digit
+      ELSE
+        Number := -1           
     END;                              
 END; 
 BEGIN
