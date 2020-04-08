@@ -25,20 +25,14 @@ BEGIN
 END;
 BEGIN
   Sum := 0;
-  ReadDigit(INPUT, Digit);
-  IF Digit <> -1
-  THEN
+  Digit := 0;
+  WHILE NOT EOLN(INPUT) AND (Digit <> -1)
+  DO
     BEGIN
-      Sum := Digit; 
-      WHILE NOT EOLN(INPUT) AND (Digit <> -1)
-      DO
-        BEGIN
-          ReadDigit(INPUT, Digit);
-          IF (Digit <> -1)
-          THEN
-            Sum := Sum + Digit 
-        END;
-      WRITE(OUTPUT, Sum)
+      ReadDigit(INPUT, Digit);
+      IF (Digit <> -1)
+      THEN
+        Sum := Sum + Digit 
     END;
-  WRITELN
+  WRITELN(OUTPUT, Sum)
 END.    
