@@ -26,7 +26,7 @@ END;
 BEGIN
   Sum := 0;
   Digit := 0;
-  WHILE NOT EOLN(INPUT) AND (Digit <> -1)
+  WHILE Digit <> -1
   DO
     BEGIN
       ReadDigit(INPUT, Digit);
