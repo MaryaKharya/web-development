@@ -30,7 +30,7 @@ BEGIN
   DO
     BEGIN
       ReadDigit(INPUT, Digit);
-      IF (Digit <> -1)
+      IF Digit <> -1
       THEN
         Sum := Sum + Digit 
     END;
