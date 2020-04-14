@@ -35,8 +35,11 @@ BEGIN
   DO
     BEGIN        
       IF (Number < (MAXINT DIV 10)) OR ((Digit <= (MAXINT MOD 10)) AND (Number = (MAXINT DIV 10)))
-      THEN 
-        Number := Number * 10 + Digit
+      THEN
+        BEGIN
+          Number := Number * 10 + Digit;
+          ReadDigit(FileIn, Digit)
+        END
       ELSE
         Number := -1           
     END;                              
