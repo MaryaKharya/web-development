@@ -19,8 +19,7 @@ BEGIN
       IF (Ch = '6') THEN Digit := 6 ELSE
       IF (Ch = '7') THEN Digit := 7 ELSE
       IF (Ch = '8') THEN Digit := 8 ELSE
-      IF (Ch = '9') THEN Digit := 9 ELSE
-      Digit := -1
+      IF (Ch = '9') THEN Digit := 9
     END     
 END;
 
