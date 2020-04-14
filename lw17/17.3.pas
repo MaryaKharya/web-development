@@ -104,11 +104,11 @@ BEGIN
   THEN
     BEGIN
       Average := Sum DIV Counter;
-      WRITELN(OUTPUT, 'Минимальное значение: ', Min);
-      WRITELN(OUTPUT, 'Максимальное значение: ', Max);
-      WRITELN(OUTPUT, 'Среднее арифметическое: ', Average, '.', (Sum MOD Counter * 10) 
+      WRITELN(OUTPUT, 'РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: ', Min);
+      WRITELN(OUTPUT, 'РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: ', Max);
+      WRITELN(OUTPUT, 'РЎСЂРµРґРЅРµРµ Р°СЂРёРІРјРµС‚РёС‡РµСЃРєРѕРµ: ', Average, '.', (Sum MOD Counter * 10) 
                       DIV Counter, (Sum MOD Counter * 10) MOD Counter * 10 DIV Counter)
     END 
   ELSE
-    WRITELN(OUTPUT, 'Ошибка переполнения. Присутствует недопустимое число') 
+    WRITELN(OUTPUT, 'РћС€РёР±РєР° РїРµСЂРµРїРѕР»СЊРЅРµРЅРёСЏ. РџСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ С‡РёСЃР»Рѕ') 
 END.    
