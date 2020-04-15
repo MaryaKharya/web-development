@@ -10,6 +10,7 @@ VAR
   NextScore: Score;
   Ave, TotalScore, ClassTotal: INTEGER;
   ForNameF: TEXT;
+  Error: BOOLEAN;
 PROCEDURE CopyFile(VAR InF, OutF: TEXT);
 VAR 
   Ch: CHAR;
@@ -26,41 +27,52 @@ BEGIN {AverageScore}
   ClassTotal := 0;
   WRITELN('Student averages:');
   Student := 1;  
-  WHILE Student <= ClassSize
+  Error := FALSE; 
+  WHILE (Student <= ClassSize) AND (NOT Error)
   DO 
     BEGIN
       TotalScore := 0;
       WhichScore := 1;
       REWRITE(ForNameF);
       CopyFile(INPUT, ForNameF);      
-      WHILE WhichScore <= NumberOfScores 
+      WHILE (WhichScore <= NumberOfScores) AND (NOT Error) 
       DO
         BEGIN
           READ(NextScore);
-          IF (NextScore > 0) AND (NextScore < 100)
+          IF (NextScore >= 0) AND (NextScore <= 100)
           THEN
             BEGIN
               TotalScore := TotalScore + NextScore;
               WhichScore := WhichScore + 1;
             END
           ELSE
-            WRITELN('Введено недопустимое число.')    
+            Error := TRUE;    
         END;
       READLN;
-      RESET(ForNameF);
-      CopyFile(ForNameF, OUTPUT);
-      TotalScore := TotalScore * 10;
-      Ave := TotalScore DIV NumberOfScores;
-      IF Ave MOD 10 >= 5
+      IF Error
       THEN
-        WRITELN(Ave DIV 10 + 1)
+        WRITELN('Введено недопустимое число.')  
       ELSE
-        WRITELN(Ave DIV 10);
-      ClassTotal := ClassTotal + TotalScore;
-      Student := Student + 1;
+        BEGIN
+          RESET(ForNameF);
+          CopyFile(ForNameF, OUTPUT);
+          TotalScore := TotalScore * 10;
+          Ave := TotalScore DIV NumberOfScores;
+          IF Ave MOD 10 >= 5
+          THEN
+            WRITELN(Ave DIV 10 + 1)
+          ELSE
+            WRITELN(Ave DIV 10);
+          ClassTotal := ClassTotal + TotalScore;
+          Student := Student + 1
+        END 
     END;
   WRITELN;
-  WRITELN ('Class average:');
-  ClassTotal := ClassTotal DIV (ClassSize * NumberOfScores);
-  WRITELN(ClassTotal DIV 10, '.', ClassTotal MOD 10:1)
+  IF NOT Error
+  THEN
+    BEGIN
+      WRITELN ('Class average:');
+      ClassTotal := ClassTotal DIV (ClassSize * NumberOfScores);
+      WRITELN(ClassTotal DIV 10, '.', ClassTotal MOD 10:1)
+    END  
 END.  {AverageScore}
