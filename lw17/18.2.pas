@@ -44,7 +44,7 @@ BEGIN {AverageScore}
               WhichScore := WhichScore + 1;
             END
           ELSE
-            WRITELN('Введено недопустимое число.')    
+            WRITELN('Р’РІРµРґРµРЅРѕ РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ С‡РёСЃР»Рѕ.')    
         END;
       READLN;
       RESET(ForNameF);
