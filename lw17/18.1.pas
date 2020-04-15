@@ -18,7 +18,7 @@ BEGIN {AverageScore}
     BEGIN
       TotalScore := 0;
       WhichScore := 1;
-      WHILE (NOT EOLN) AND (WhichScore < NumberOfScores)
+      WHILE WhichScore <= NumberOfScores
       DO
         BEGIN
           READ(NextScore);
@@ -30,15 +30,15 @@ BEGIN {AverageScore}
       Ave := TotalScore DIV NumberOfScores;
       IF Ave MOD 10 >= 5
       THEN
-        WRITELN(Ave DIV 10 + 1)
+        WRITELN('Average: ', Ave DIV 10 + 1)
       ELSE
-        WRITELN(Ave DIV 10);
+        WRITELN('Average: ', Ave DIV 10);
       ClassTotal := ClassTotal + TotalScore;
       Student := Student + 1
     END;
   WRITELN;
   WRITELN ('Class average:');
-  Ave := ClassTotal DIV (ClassSize * NumberOfScores);
-  WRITELN(Ave DIV 10, '.', Ave MOD 10:1)
+  ClassTotal := ClassTotal DIV (ClassSize * NumberOfScores);
+  WRITELN(ClassTotal DIV 10, '.', ClassTotal MOD 10:1)
 END.  {AverageScore}
 
