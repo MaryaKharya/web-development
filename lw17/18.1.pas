@@ -13,11 +13,11 @@ BEGIN {AverageScore}
   ClassTotal := 0;
   WRITELN('Student averages:');
   Student := 1;
-  WHILE Student < ClassSize
+  WHILE Student <= ClassSize
   DO 
     BEGIN
       TotalScore := 0;
-      WhichScore := ;
+      WhichScore := 1;
       WHILE (NOT EOLN) AND (WhichScore < NumberOfScores)
       DO
         BEGIN
