@@ -501,6 +501,11 @@ h4
     font-weight: 400;
 }
 
+.radio_button
+{
+    cursor: pointer;
+}
+
 .gender
 {
     font-size: 18px;
