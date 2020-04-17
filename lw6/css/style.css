@@ -238,11 +238,6 @@ ol
     background-color: #15a98c;
 }
 
-.menu:hover .video_button:before
-{
-    filter: invert(10);
-}
-
 .background
 {
     background-image: url(../images/background.jpg);
@@ -329,6 +324,11 @@ h4
 {
     background-color: #008B8B;
     cursor: pointer;
+}
+
+.all_films_button:focus
+{
+    outline: none;
 }
 
 .blank
@@ -485,6 +485,11 @@ h4
 {
     background-color: #008B8B;
     cursor: pointer;
+}
+
+.send:focus
+{
+    outline: none;
 }
 
 .label_design
