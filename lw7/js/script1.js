@@ -11,20 +11,20 @@ function isPrimeNumber(n) {
           console.log('data entered incorrectly') 
         }
     }
-  }
-  if (typeof n === 'number') {
-    if (PrimeElement(n)) {
-      console.log(`${n} is prime number`)
-    } else {
-        console.log(`${n} is not prime number`)
-      }
-  }
-  if ((!typeof n === 'number') && (!Array.isArray(n))) {
-    console.log('data entered incorrectly')
-  }
+  } else {
+      if (typeof n === 'number') {
+        if (primeElement(n)) {
+          console.log(`${n} is prime number`)
+        } else {
+            console.log(`${n} is not prime number`)
+          }
+      } else {
+          console.log('data entered incorrectly')
+        }
+    }
 }
 
-function PrimeElement(e) {
+function primeElement(e) {
     let isPrime = true
     for (let j = 2; j < e; j++) {
       if (e % j == 0) {
