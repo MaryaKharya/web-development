@@ -86,12 +86,16 @@ body
 {
     margin: 0 auto;
 }
-
 .cont
 {
     min-width: 1024px;
 }
 
+.cont1
+{
+    margin: 0 auto;
+    max-width: 1262px;
+}
 
 header
 {
@@ -185,10 +189,7 @@ ol
 {
     background: url(../images/about_me_icon.png) no-repeat;
     background-position: 21px 16px;
-    padding-left: 45px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 21px;
+    padding: 10px 21px 10px 45px;
 }
 
 .about_me_button:hover
@@ -201,10 +202,7 @@ ol
 {
     background: url(../images/hobby_icon.png) no-repeat;
     background-position: 18px 17px;
-    padding-left: 42px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 21px;
+    padding: 10px 21px 10px 42px;
 }
 
 .hobby_button:hover
@@ -217,10 +215,7 @@ ol
 {
     background: url(../images/video_icon.png) no-repeat;
     background-position: 14px 17px;
-    padding-left: 42px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 21px;
+    padding: 10px 21px 10px 42px;
 }
 
 .video_button:hover
@@ -257,11 +252,12 @@ ol
 
 .about_films
 {
-    margin-left: 27px;
+    padding-left: 27px;
     margin-top: 70px;
     background-color: #f9f9f9;
     padding-top: 5px;
     padding-bottom: 60px;
+    background-position: center 50px;
 }
 
 .photo_film
@@ -332,6 +328,7 @@ h4
 .all_films_button:hover
 {
     background-color: #008B8B;
+    cursor: pointer;
 }
 
 .blank
@@ -383,6 +380,7 @@ h4
     border: 2px solid #c9c9c9;
     font: 400 18px/32px "Open Sans";
     padding-left: 17px;
+    padding-right: 17px;
     margin-left: 2px;
     margin-top: 2px;
     margin-bottom: 28px;
@@ -413,17 +411,31 @@ h4
     margin-bottom: 43px;
 }
 
-
 .cell:hover
 {
     border-radius: 3px;
+    border: 2px solid #a6a6a6;
+}
+
+.cell:focus
+{
+    border-radius: 3px;
     border: 2px solid #15a98c;
+    outline: none;
 }
 
 .combo_box:hover
 {
     border-radius: 3px;
+    border: 2px solid #a6a6a6;
+    cursor: pointer;
+}
+
+.combo_box:focus
+{
+    border-radius: 3px;
     border: 2px solid #15a98c;
+    outline: none;
 }
 
 .message
@@ -437,6 +449,21 @@ h4
     margin-top: 4px;
     font: 400 18px/32px "Open Sans";
     color: #555555;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.message:hover
+{
+    border-radius: 3px;
+    border: 2px solid #a6a6a6;
+}
+
+.message:focus
+{
+    border-radius: 3px;
+    border: 2px solid #15a98c;
+    outline: none;
 }
 
 .send
@@ -457,6 +484,7 @@ h4
 .send:hover
 {
     background-color: #008B8B;
+    cursor: pointer;
 }
 
 .label_design
@@ -477,6 +505,7 @@ h4
     font-weight: 400;
     margin-right: 30px;
     margin-left: 2px;
+    cursor: pointer;
 }
 
 .gender_choice
