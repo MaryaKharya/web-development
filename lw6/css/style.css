@@ -91,12 +91,6 @@ body
     min-width: 1024px;
 }
 
-.container
-{
-    margin: 0 auto;
-    max-width: 1262px;
-}
-
 header
 {
     margin-left: 148px;
