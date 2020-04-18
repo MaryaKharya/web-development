@@ -333,8 +333,8 @@ h4
 
 .blank
 {
-    margin: 0 auto;
-    max-width: 800px;
+    margin-left: 230px;
+    width: 800px;
 }
 
 .write_me
@@ -374,7 +374,7 @@ h4
 
 .cell
 {
-    width: 519px;
+    width: 504px;
     height: 43px;
     border-radius: 3px;
     border: 2px solid #c9c9c9;
