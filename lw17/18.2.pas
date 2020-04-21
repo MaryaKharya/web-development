@@ -2,6 +2,8 @@ PROGRAM AverageScore(INPUT, OUTPUT);
 CONST
   NumberOfScores = 4;
   ClassSize = 4;
+  ScoreMin = 0;
+  ScoreMax = 100;
 TYPE
   Score = 0 .. 100;
 VAR
@@ -9,9 +11,9 @@ VAR
   Student: 1 .. ClassSize;
   NextScore: Score;
   Ave, TotalScore, ClassTotal: INTEGER;
-  ForNameF: TEXT;
+  StorageNameFile: TEXT;
   Error: BOOLEAN;
-PROCEDURE CopyFile(VAR InF, OutF: TEXT);
+PROCEDURE CopyName(VAR InF, OutF: TEXT);
 VAR 
   Ch: CHAR;
 BEGIN   
@@ -20,26 +22,27 @@ BEGIN
     BEGIN
       READ(InF, Ch);
       WRITE(OutF, Ch)
-    END;  
+    END;
+  WRITELN  
 END;
          
 BEGIN {AverageScore}
   ClassTotal := 0;
   WRITELN('Student averages:');
-  Student := 1;  
+  Student := 1; 
   Error := FALSE; 
   WHILE (Student <= ClassSize) AND (NOT Error)
   DO 
     BEGIN
       TotalScore := 0;
       WhichScore := 1;
-      REWRITE(ForNameF);
-      CopyFile(INPUT, ForNameF);      
-      WHILE (WhichScore <= NumberOfScores) AND (NOT Error) 
+      REWRITE(StorageNameFile);
+      CopyName(INPUT, StorageNameFile);      
+      WHILE (WhichScore <= NumberOfScores) AND (NOT Error) AND (NOT EOLN)
       DO
         BEGIN
           READ(NextScore);
-          IF (NextScore >= 0) AND (NextScore <= 100)
+          IF (NextScore >= ScoreMin) AND (NextScore <= ScoreMax)
           THEN
             BEGIN
               TotalScore := TotalScore + NextScore;
@@ -54,8 +57,8 @@ BEGIN {AverageScore}
         WRITELN('Введено недопустимое число.')  
       ELSE
         BEGIN
-          RESET(ForNameF);
-          CopyFile(ForNameF, OUTPUT);
+          RESET(StorageNameFile);
+          CopyName(StorageNameFile, OUTPUT);
           TotalScore := TotalScore * 10;
           Ave := TotalScore DIV NumberOfScores;
           IF Ave MOD 10 >= 5
@@ -65,8 +68,8 @@ BEGIN {AverageScore}
             WRITELN(Ave DIV 10);
           ClassTotal := ClassTotal + TotalScore;
           Student := Student + 1
-        END 
-    END;
+        END
+    END;  
   WRITELN;
   IF NOT Error
   THEN
