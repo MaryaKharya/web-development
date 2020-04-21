@@ -43,64 +43,49 @@ BEGIN
       ELSE
         Number := -1           
     END;                              
-END; 
+END;
+
 BEGIN
-  Min := 0;
-  Max := 0;
-  Counter := 0;
-  Overflow := FALSE;
-  ReadNumber(INPUT, Number1);
-  IF Number1 <> -1
+  Overflow := TRUE;
+  ReadNumber(INPUT, Number);
+  IF Number <> -1
   THEN
     BEGIN
-      Overflow := TRUE; 
+      Min := Number;
+      Max := Number;
       Counter := 1;
-      Sum := Number1;
-      ReadNumber(INPUT, Number2);
-      IF Number2 <> -1
-      THEN
+      Sum := Number;
+      Average := Number;
+      Overflow := FALSE;
+      WHILE (NOT EOLN) AND (NOT Overflow)
+      DO
         BEGIN
-          Counter := Counter + 1;
-          IF (MAXINT - Number1 >= Number2)
-          THEN
-            Sum := Number1 + Number2 
-          ELSE
-            Overflow := FALSE;
-          IF Number1 < Number2
+          ReadNumber(INPUT, Number);
+          IF (Number <> -1) AND (MAXINT - 1 >= Counter)
           THEN
             BEGIN
-              Min := Number1;
-              Max := Number2
+              Counter := Counter + 1;
+              IF (MAXINT - Number >= Sum)
+              THEN
+                Sum := Sum + Number 
+              ELSE
+                Overflow := TRUE  
             END
           ELSE
-            BEGIN
-              Min := Number2;
-              Max := Number1
-            END;       
-          WHILE (NOT EOLN) AND (Overflow)
-          DO
-            BEGIN
-              ReadNumber(INPUT, Number2);
-              IF Number2 <> -1
+            Overflow := TRUE;
+          IF NOT Overflow
+          THEN
+            BEGIN    
+              IF Number < Min
               THEN
-                BEGIN
-                  Counter := Counter + 1;
-                  IF (MAXINT - Number2 >= Sum)
-                  THEN
-                    Sum := Sum + Number2 
-                  ELSE
-                    Overflow := FALSE
-                END;
-              IF (Max <= Number2)
+                Min := Number;
+              IF Number > Max
               THEN
-                Max := Number2; 
-              IF (Min >= Number2)
-              THEN
-                Min := Number2
+                Max := Number;
             END
         END
     END;
-  IF Overflow
+  IF NOT Overflow
   THEN
     BEGIN
       Average := Sum DIV Counter;
