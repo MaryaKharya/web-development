@@ -1,6 +1,6 @@
 PROGRAM Stat(INPUT, OUTPUT);
 VAR
-  Number1, Number2, Min, Max, Average, Sum, Counter: INTEGER;
+  Number, Min, Max, Average, Sum, Counter: INTEGER;
   Overflow: BOOLEAN;
 PROCEDURE ReadDigit(VAR InF: TEXT; VAR Digit: INTEGER);
 VAR
