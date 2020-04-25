@@ -184,7 +184,7 @@ ol
 {
     background: url(../images/about_me_icon.png) no-repeat;
     background-position: 21px 16px;
-    padding: 10px 21px 9px 45px;
+    padding: 9px 21px 9px 45px;
 }
 
 .about_me_button:hover
@@ -197,7 +197,7 @@ ol
 {
     background: url(../images/hobby_icon.png) no-repeat;
     background-position: 16px 17px;
-    padding: 10px 21px 9px 42px;
+    padding: 9px 21px 9px 42px;
 }
 
 .hobby_button:hover
@@ -210,7 +210,7 @@ ol
 {
     background: url(../images/video_icon.png) no-repeat;
     background-position: 15px 17px;
-    padding: 10px 21px 9px 42px;
+    padding: 9px 21px 9px 42px;
 }
 
 .video_button:hover
