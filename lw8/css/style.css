@@ -1,0 +1,603 @@
+
+.image
+{
+    width: 330px;
+    height: 390px;
+    border-radius: 5px;
+}
+
+h1
+{
+    margin: 0;
+}
+
+.name
+{
+
+    font: 700 48px "Open Sans";
+    color: #333333;
+    margin-left: -5px;
+    margin-top: 95px;
+}
+
+
+.vitae
+{
+    font: 19px/32px "Georgia";
+    color: #555555;
+    margin-top: 37px;
+    margin-left: 8px;
+}
+
+.hobby
+{
+    font: 19px/32px "Georgia";
+    color: #555555;
+    margin-top: -15px;
+    margin-left: 8px;
+}
+
+h2
+{
+    font: 400 36px/42px "Open Sans";
+    color: #333333;
+}
+
+.marya_harya
+{
+    margin-top: 45px;
+    margin-left: 6px;
+}
+
+.link
+{
+    font: 19px/32px "Georgia";
+    color: #15a98b;
+    margin-top: -300px;
+    margin-left: 8px;
+}
+
+.link:hover
+{
+    color: #2E8B57;
+}
+
+.indent_link
+{
+    margin-top: 45px;
+    font: 19px/32px "Georgia";
+    color: #15a98b;
+}
+
+.title_list
+{
+    font: 600 24px/32px "Open Sans";
+    color: #15a98c;
+    margin-left: -1px;
+}
+
+.indent_list
+{
+    margin-top: 56px;
+}
+
+
+body
+{
+    margin: 0 auto;
+}
+
+.cont
+{
+    min-width: 1024px;
+}
+
+header
+{
+    margin-left: 255px;
+}
+
+.sidebar
+{
+    width: 330px;
+    float: left;
+}
+
+.main_content
+{
+    width: 560px;
+    float: left;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.main
+{
+    display: inline-block;
+    margin-top: 209px;
+    margin-left: 255px;
+}
+
+.quote_and_author
+{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.quote
+{
+    font: italic 28px/42px "Georgia";
+    color: #ffffff;
+    margin-top: 25px;
+}
+
+.author
+{
+    width: 204px;
+    color: #f5f5f5;
+    font: 600 16px/42px "Open Sans";
+    margin-top: -25px;
+}
+
+
+.about_me
+{
+    float: right;
+    display: inline-block;
+    width: 561px;
+    margin-right: 160px;
+    margin-top: 95px;
+}
+
+.lists
+{
+    display: block;
+    width: 330px;
+    margin-top: 40px;
+}
+
+ul
+{
+    margin: -11px -16px;
+}
+
+li
+{
+    width: 330px;
+    font: 19px/36px "Georgia";
+    color: #555555;
+}
+
+ol
+{
+    margin-left: -22px;
+    margin-top: -12px;
+}
+
+.line
+{
+    margin-top: 19px;
+    margin-left: 8px;
+}
+
+.about_me_button
+{
+    background: url(../images/about_me_icon.png) no-repeat;
+    background-position: 21px 16px;
+    padding: 9px 21px 9px 45px;
+}
+
+.about_me_button:hover
+{
+    background: url(../images/about_me_icon_hover.png) no-repeat;
+    background-position: 21px 16px;
+}
+
+.hobby_button
+{
+    background: url(../images/hobby_icon.png) no-repeat;
+    background-position: 18px 17px;
+    padding: 9px 21px 9px 42px;
+}
+
+.hobby_button:hover
+{
+    background: url(../images/hobby_icon_hover.png) no-repeat;
+    background-position: 18px 17px;
+}
+
+.video_button
+{
+    background: url(../images/video_icon.png) no-repeat;
+    background-position: 14px 17px;
+    padding: 9px 21px 9px 42px;
+}
+
+.video_button:hover
+{
+    background: url(../images/video_icon_hover.png) no-repeat;
+    background-position: 14px 17px;
+}
+
+.menu
+{
+    font: 19px/32px "Georgia";
+    color: #333333;
+    display: inline-block;
+    text-decoration: none
+}
+
+.menu:hover
+{
+    color: #ffffff;
+    background-color: #15a98c;
+}
+
+.background
+{
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat; 
+    background-position: center 50px;
+}
+
+.about_films
+{
+    padding-left: 27px;
+    margin-top: 70px;
+    background-color: #f9f9f9;
+    padding-top: 5px;
+    padding-bottom: 60px;
+    background-position: center 50px;
+}
+
+.favorite_films
+{
+    padding-left: 110px;
+}
+
+.film_block
+{
+    overflow: hidden;
+    width: 1280px;
+}
+
+.list_films
+{
+    width: 6000px;
+    margin-left: 70px;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    font-size: 0;
+}
+
+.list_films li 
+{
+    display: inline-block;
+}
+
+.photo_film
+{
+    width: 285px;
+    height: 190px;
+    border-radius: 5px;
+    background-color: #464646;
+    margin-top: 5px;
+}
+
+h4
+{
+    font: 700 22px/32px "Open Sans";
+    color: #333333;
+    margin-left: -2px;
+    margin-top: 13px;
+}
+
+.content
+{
+    font: 16px/28px "Georgia";
+    color: #555555;
+    width: 283px;
+    margin-top: -12px;
+}
+
+.film
+{
+    vertical-align: top;
+    margin-right: -25px;
+}
+
+
+.all_films_button
+{
+    border-radius: 5px;
+    background-color: #15a98c;
+    font: 19px/32px "Georgia";
+    color: #f5f5f5;
+    padding: 10px 55px;
+    margin-top: 100px;
+    margin-left: 590px;
+    border: none;
+}
+
+.all_films_button:hover
+{
+    background-color: #008B8B;
+    cursor: pointer;
+}
+
+.all_films_button:focus
+{
+    outline: none;
+}
+
+.blank
+{
+    margin-left: 340px;
+    width: 800px;
+}
+
+.write_me
+{
+    padding-top: 13px;
+    padding-left: 269px;
+    font: 300 36px/42px "Open Sans";
+}
+
+.write_me:before
+{
+    content: '';
+    position: absolute;
+    width: 200px;
+    border-top: 2px solid #4e4e4e;
+    margin-left: -230px;
+    margin-top: 24px;
+}
+
+.write_me:after
+{
+    content: '';
+    position: absolute;
+    width: 200px;
+    border-top: 2px solid #4e4e4e;
+    margin-left: 25px;
+    margin-top: 24px;
+}
+
+.your_form
+{
+    margin: 0 auto;
+    max-width: 550px;
+    padding-top: 42px;
+    padding-left: 2px;
+}
+
+.cell
+{
+    width: 504px;
+    height: 43px;
+    border-radius: 3px;
+    border: 2px solid #c9c9c9;
+    font: 400 18px/32px "Open Sans";
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 28px;
+}
+
+.snowflake
+{
+    color: red;
+}
+
+.combo_box
+{
+    width: 540px;
+    height: 50px;
+    border-radius: 3px;
+    border: 2px solid #c9c9c9;
+    margin-left: 2px;
+    margin-top: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../images/arrow_down.png) no-repeat;
+    background-position: 498px 18px;
+    font: 400 18px/32px "Open Sans";
+    color: #555555;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    margin-bottom: 43px;
+}
+
+.cell:hover
+{
+    border-radius: 3px;
+    border: 2px solid #a6a6a6;
+}
+
+.cell:focus
+{
+    border-radius: 3px;
+    border: 2px solid #15a98c;
+    outline: none;
+}
+
+.combo_box:hover
+{
+    border-radius: 3px;
+    border: 2px solid #a6a6a6;
+    cursor: pointer;
+}
+
+.combo_box:focus
+{
+    border-radius: 3px;
+    border: 2px solid #15a98c;
+    outline: none;
+}
+
+.message
+{
+    width: 504px;
+    height: 142px;
+    margin-left: 1px;
+    border-radius: 3px;
+    border: 2px solid #c9c9c9;
+    resize: none;
+    margin-top: 4px;
+    font: 400 18px/32px "Open Sans";
+    color: #555555;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.message:hover
+{
+    border-radius: 3px;
+    border: 2px solid #a6a6a6;
+}
+
+.message:focus
+{
+    border-radius: 3px;
+    border: 2px solid #15a98c;
+    outline: none;
+}
+
+.send
+{
+    font: 19px/32px "Georgia";
+    color: #f5f5f5;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #15a98c;
+    margin-top: 45px;
+    margin-left: 2px;
+    padding-left: 5px;
+    padding-right: 3px;
+    border: none;
+}
+
+.send:hover
+{
+    background-color: #008B8B;
+    cursor: pointer;
+}
+
+.send:focus
+{
+    outline: none;
+}
+
+.label_design
+{
+    font-size: 20px;
+    line-height: 32px;
+    color: #333333;
+    font-family: "Open Sans";
+    font-weight: 400;
+}
+
+.radio_button
+{
+    cursor: pointer;
+}
+
+.gender
+{
+    font-size: 18px;
+    line-height: 32px;
+    color: #333333;
+    font-family: "Open Sans";
+    font-weight: 400;
+    margin-right: 30px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.gender_choice
+{
+    margin-top: 5px;
+    margin-left: -3px;
+    margin-bottom: 34px;
+}
+
+footer
+{
+    background: #f5f5f5;
+    height: 70px;
+    margin-top: 48px;
+}
+
+.footer
+{
+    font: 16px/32px "Georgia";
+    color: #555555;
+    padding-top: 20px;
+    margin-left: 390px;
+}
+
+.carousel 
+{
+    position: relative;
+    width: 1310px;
+    padding: 10px 40px;
+}
+
+.arrow 
+{
+    position: absolute;
+    top: 75px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 40px;
+}
+
+.arrow:focus 
+{
+    outline: none;
+}
+
+.arrow:hover 
+{
+    cursor: pointer;
+}
+
+.prev 
+{
+    left: 0;
+    background: url(../images/arrow_left.png);
+    background-position: -5px -7px;
+    background-size: 80px 80px;
+}
+
+.prev:hover
+{
+    background: url(../images/arrow_left_hover.png);
+    background-position: -5px -7px;
+    background-size: 80px 80px; 
+}
+
+.next 
+{
+    right: -30px;
+    background: url(../images/arrow_right.png);
+    background-position: -5px -7px;
+    background-size: 80px 80px;
+}
+
+.next:hover
+{
+    background: url(../images/arrow_right_hover.png);
+    background-position: -5px -7px;
+    background-size: 80px 80px; 
+}
