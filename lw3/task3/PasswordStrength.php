@@ -5,10 +5,9 @@ if ($_GET['password'])
     $password = $_GET['password'];
     $strength = 0;
     $len = strlen($password);
-    $n = strlen($password);
     if (preg_match("/^[aA-zZ0-9]+$/", $password))
     {
-        $strength = 4*$n;
+        $strength = 4*$len;
         if (preg_match_all( '/[0-9]/', $password, $matches))
         {
             $n = count($matches[0]);
