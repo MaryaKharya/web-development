@@ -29,10 +29,8 @@ function carousel() {
     if (count <= films.length + mainFilms - 1) {
       i++;
     } else {
-        if (count == films.length + mainFilms) {
-          count = mainFilms;
-          i = 0;
-        }
+        count = mainFilms;
+        i = 0;
       }
   }
 }
