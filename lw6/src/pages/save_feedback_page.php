@@ -46,7 +46,7 @@ function checkingTheForm()
 
     
     $data = [
-        "$name, $email , $country , $gender , $message"
+        $name, ',', $email, ',', $country, ',', $gender, ',', $message
     ];
 
     $file = "../data/" . mb_strtolower($email) . ".txt";
