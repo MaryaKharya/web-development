@@ -25,7 +25,7 @@ function showData()
 
     if (!(file_exists($file)))
     {
-        echo 'Введен неверный email';
+        echo 'email не введен';
     }
     else
     {
