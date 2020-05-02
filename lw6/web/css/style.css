@@ -345,22 +345,24 @@ h4
     font: 300 36px/42px "Open Sans";
 }
 
+
 .write_me:before
 {
     content: '';
     position: absolute;
     width: 200px;
-    border-top: 2px solid #4e4e4e;
+    border-top: 1px solid #4e4e4e;
     margin-left: -230px;
     margin-top: 24px;
 }
+
 
 .write_me:after
 {
     content: '';
     position: absolute;
     width: 200px;
-    border-top: 2px solid #4e4e4e;
+    border-top: 1px solid #4e4e4e;
     margin-left: 25px;
     margin-top: 24px;
 }
@@ -371,6 +373,15 @@ h4
     max-width: 550px;
     padding-top: 42px;
     padding-left: 2px;
+}
+
+.your_form_answer
+{
+    margin: 0 auto;
+    max-width: 500px;
+    padding-top: 42px;
+    margin-left: 50px;
+    display: inline-block;
 }
 
 .cell
@@ -423,6 +434,22 @@ h4
     border-radius: 3px;
     border: 2px solid #15a98c;
     outline: none;
+}
+
+
+.cell_answer
+{
+    width: 480px;
+    height: 35px;
+    border-radius: 3px;
+    border: 2px solid #c9c9c9;
+    font: 400 18px/32px "Open Sans";
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 28px;
+    
 }
 
 .combo_box:hover
@@ -503,6 +530,16 @@ h4
     font-weight: 400;
 }
 
+.label_design_answer
+{
+    font-size: 20px;
+    line-height: 32px;
+    color: #333333;
+    font-family: "Open Sans";
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
 .radio_button
 {
     cursor: pointer;
@@ -556,4 +593,11 @@ footer
     font: 20px/42px "Open Sans";
     margin-left: 15px;
     display: inline;
+}
+
+.data_message
+{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 20px;
 }
