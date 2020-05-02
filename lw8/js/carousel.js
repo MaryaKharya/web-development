@@ -24,20 +24,15 @@ function carousel() {
   }
 
   buttonRight.onclick = function(){
-    if (count <= films.length + 1) {
-      offsetToEnd();
+    listOfFilms.appendChild(films[i]);
+    count++;
+    if (count <= films.length + mainFilms - 1) {
       i++;
     } else {
-        offsetToEnd();
         if (count == films.length + mainFilms) {
           count = mainFilms;
           i = 0;
         }
       }
-  }
-
-  function offsetToEnd() {
-    listOfFilms.appendChild(films[i]);
-    count++;
   }
 }
