@@ -11,6 +11,10 @@ function GETParameter(string $text): ?string
     $lastname = GETParameter('last_name');
     $email = GETParameter('email');
     $age = GETParameter('age');
+    if (!is_dir("data") && ($email))
+    {
+        mkdir("data");
+    }
     if ($email)
     {
         $data = "$firstname $lastname $email $age";
