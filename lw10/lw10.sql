@@ -6,39 +6,37 @@ CREATE TABLE studentFaculty
 (
     id                  INT AUTO_INCREMENT NOT NULL,
     faculty_name        VARCHAR(255)       NOT NULL,
-    number_of_groups    INT                NOT NULL,
     PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8mb4
   COLLATE 'utf8mb4_unicode_ci'
   ENGINE = InnoDB;
 
-INSERT INTO studentFaculty (faculty_name, number_of_groups) VALUES
-    ('ФИиВТ', 3),
-    ('ФСТ', 3),
-    ('ИММ', 3);
+INSERT INTO studentFaculty (faculty_name) VALUES
+    ('ФИиВТ'),
+    ('ФСТ'),
+    ('ИММ');
 
 CREATE TABLE studentGroup 
 (
     id                    INT AUTO_INCREMENT NOT NULL,
     group_name            VARCHAR(255)       NOT NULL,
     faculty               INT                NOT NULL,
-    number_of_students    INT                NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (faculty) REFERENCES studentFaculty (id)
 ) DEFAULT CHARACTER SET utf8mb4
   COLLATE 'utf8mb4_unicode_ci'
   ENGINE = InnoDB;
 
-INSERT INTO studentGroup (group_name, faculty, number_of_students) VALUES
-    ('ПС-11', 1, 5),
-    ('ПС-12', 1, 5),
-    ('ПС-13', 1, 5),
-    ('СР-11', 2, 5),
-    ('СР-12', 2, 5),
-    ('СР-13', 2, 5),
-    ('МС-11', 3, 5),
-    ('МС-12', 3, 5),
-    ('МС-13', 3, 5);
+INSERT INTO studentGroup (group_name, faculty) VALUES
+    ('ПС-11', 1),
+    ('ПС-12', 1),
+    ('ПС-13', 1),
+    ('СР-11', 2),
+    ('СР-12', 2),
+    ('СР-13', 2),
+    ('МС-11', 3),
+    ('МС-12', 3),
+    ('МС-13', 3);
 
 CREATE TABLE student
 (
