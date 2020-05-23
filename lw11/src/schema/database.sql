@@ -5,7 +5,7 @@ USE lw11;
 CREATE TABLE user
 (
     id              INT AUTO_INCREMENT NOT NULL,
-    name      VARCHAR(255)       NOT NULL,
+    name            VARCHAR(255)       NOT NULL,
     email           VARCHAR(255)       NOT NULL,
     country         VARCHAR(255)       NOT NULL,
     gender          VARCHAR(255)       NOT NULL,
