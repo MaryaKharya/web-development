@@ -57,8 +57,8 @@ function checkingTheForm()
     $feedback['message'] = $message;
     if (!(empty($name)) && !(empty($email)) && !(empty($message))) 
     {
-        $loh = getFeedback($email);
-        if (!($loh))
+        $checkemail = getFeedback($email);
+        if (!($checkemail))
         {           
             $feedback['send'] = 'Ваще сообщение отправлено!';
             saveFeedback($feedback);
