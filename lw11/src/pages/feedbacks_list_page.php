@@ -3,21 +3,6 @@
 include '../src/common.inc.php';
 
 
-function getFeedback(string $email): array
-{
-    $connection = databaseConnection();
-    $email = $connection->quote($email);
-    $checking = "SELECT EXISTS (SELECT * FROM user WHERE email = ${email}) AS data";
-    $result = $connection->query($checking)->fetch();
-    if ($result['data'])
-    {
-        $sql = "SELECT name, email, country, gender, message FROM user WHERE email = ${email}";
-        $stmt = $connection->query($sql);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    return[];
-}
-
 function feedbacksListPage(): void 
 {
     $email = getPostParameter('email');
