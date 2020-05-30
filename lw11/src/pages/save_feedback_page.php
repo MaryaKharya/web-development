@@ -2,22 +2,23 @@
 
 include '../src/common.inc.php';
 
-function databaseConnection(): PDO
-{
-    static $connection = null;
-    if ($connection === null)
-    {
-        $connection = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
-        $connection->query('set names utf8');
-    }
-    return $connection;
-}
-
 function saveFeedback(array $feedback): void
 {
     $connection = databaseConnection();
-    $sql = "INSERT INTO user (name, email, country, gender, message) VALUES ('${feedback['name']}', '${feedback['email']}', '${feedback['country']}', '${feedback['gender']}', '${feedback['message']}')";
+    $sql = "INSERT INTO user (name, email, country, gender) VALUES ('${feedback['name']}', '${feedback['email']}', '${feedback['country']}', '${feedback['gender']}')";
     $connection->query($sql);
+    $a = getFeedbacks($email);
+    $sqll = "INSERT INTO message (message, user_id) VALUES ('${feedback['message']}', '${insert_id}')";
+    $connection->query($sqll);
+}
+
+function message(array $feedback): void
+{
+    $connection = databaseConnection();
+    $email = getPostParameter('email');
+    $array = getFeedbackId($email);
+    $sqll = "UPDATE message SET message=CONCAT(message, ' ${feedback['message']}') WHERE user_id=${array['id']}";
+    $connection->query($sqll);
 }
 
 function checkingTheForm() 
@@ -65,7 +66,8 @@ function checkingTheForm()
         }
         else 
         {
-            ($feedback['email_error_msg'] = 'Такой email уже существует' );
+            message($feedback);
+            $feedback['send'] = 'Сообщение добавлено!';
         }
     }
     else
