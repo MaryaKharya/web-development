@@ -9,8 +9,18 @@ CREATE TABLE user
     email           VARCHAR(255)       NOT NULL,
     country         VARCHAR(255)       NOT NULL,
     gender          VARCHAR(255)       NOT NULL,
-    message         TEXT               NOT NULL,
     PRIMARY KEY (id)
+) DEFAULT CHARACTER SET utf8mb4
+  COLLATE 'utf8mb4_unicode_ci'
+  ENGINE = InnoDB;
+
+CREATE TABLE message
+(
+    id              INT AUTO_INCREMENT NOT NULL,
+    message         VARCHAR(255)       NOT NULL,
+	user_id         INT                NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES user (id)
 ) DEFAULT CHARACTER SET utf8mb4
   COLLATE 'utf8mb4_unicode_ci'
   ENGINE = InnoDB;
