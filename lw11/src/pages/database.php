@@ -26,7 +26,7 @@ function getFeedback(string $email): array
     return[];
 }
 
-function getFeedbacks(string $email): array
+function getFeedbackId(string $email): array
 {
     $connection = databaseConnection();
     $email = $connection->quote($email);
