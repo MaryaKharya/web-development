@@ -1,19 +1,16 @@
 PROGRAM XPrint(INPUT, OUTPUT);
 CONST
   Width = 5;
-  Height = 5;
   Size = 25;
 TYPE
   MatrixSize = SET OF 1..Size;
-  Alpha = SET OF 'A'..'Z';
 VAR
   Ch, Ch2: CHAR;
-  HeightCount, WidthCount, Count: INTEGER;
+  Count: INTEGER;
   Matrix: MatrixSize;
   MatrixFile: TEXT;
-  Ok: Alpha;
 BEGIN
-  WRITE('¬‚Â‰ËÚÂ ‚‡¯ ÚÂÍÒÚ: ');
+  WRITE('–í–≤–µ–¥–∏—Ç–µ –≤–∞—à —Ç–µ–∫—Å—Ç: ');
   WHILE NOT EOLN
   DO
     BEGIN
@@ -21,7 +18,6 @@ BEGIN
       Matrix := [];
       ASSIGN(MatrixFile, 'MATRICES.TXT');
       RESET(MatrixFile);
-      Count := 1;
       WHILE NOT EOF(MatrixFile)
       DO
         BEGIN
@@ -32,23 +28,20 @@ BEGIN
               WHILE NOT EOLN(MatrixFile)
               DO
                 BEGIN
-                  READ(MatrixFile, WidthCount);
-                  Matrix := Matrix + [WidthCount];
+                  READ(MatrixFile, Count);
+                  Matrix := Matrix + [Count];
                 END;
-              FOR HeightCount := 1 TO Height
+              FOR Count := 1 TO Size
               DO
                 BEGIN
-                  FOR WidthCount := 1 TO Width
-                  DO
-                    BEGIN
-                      IF Count IN Matrix
-                      THEN
-                        WRITE('X')
-                      ELSE
-                        WRITE(' ');
-                      Count := Count + 1
-                    END;
-                  WRITELN
+                  IF Count IN Matrix
+                  THEN
+                    WRITE('X')    
+                  ELSE
+                    WRITE(' ');
+                  IF (Count MOD Width = 0)
+                  THEN
+                    WRITELN
                 END
             END
           ELSE
@@ -56,4 +49,3 @@ BEGIN
         END;
       WRITELN   
     END
-END.    
