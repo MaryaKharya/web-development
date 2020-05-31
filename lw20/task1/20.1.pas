@@ -1,13 +1,12 @@
 PROGRAM GraphicPrinting(INPUT, OUTPUT);
 CONST
   Width = 5;
-  Height = 5;
   Size = 25;
 TYPE
   MatrixSize = SET OF 1..Size;
 VAR
   Ch: CHAR;
-  HeightCount, WidthCount, Count: INTEGER;
+  Count: INTEGER;
   Matrix: MatrixSize;
 BEGIN
   Count := 1;
@@ -49,21 +48,17 @@ BEGIN
     '7': Matrix := [2, 3, 4, 5, 9, 13, 18, 23];
     '8': Matrix := [2, 3, 4, 6, 10, 12, 13, 14, 16, 20, 22, 23, 24];
     '9': Matrix := [2, 3, 4, 6, 10, 12, 13, 14, 15, 20, 22, 23, 24]
-  END;
-  FOR HeightCount := 1 TO Height
+  FOR Count := 1 TO Size
   DO
     BEGIN
-      FOR WidthCount := 1 TO Width
-      DO
-        BEGIN
-          IF Count IN Matrix
-          THEN
-            WRITE('X')
-          ELSE
-            WRITE(' ');
-          Count := Count + 1
-        END;
-      WRITELN
+      IF Count IN Matrix
+      THEN
+        WRITE('X')    
+      ELSE
+        WRITE(' ');
+      IF (Count MOD Width = 0)
+      THEN
+        WRITELN
     END; 
 END.
                             
