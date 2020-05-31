@@ -4,11 +4,11 @@ CONST
   Max = 100;
 VAR
   Sieve: SET OF Min .. Max;
-  Multiple, NumDel: INTEGER;
+  Multiple, Index: INTEGER;
 BEGIN
   Multiple := Min;
   Sieve := [Min .. Max];
-  WRITELN('Простые числа: ');
+  WRITELN('РџСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р°: ');
   WHILE Multiple <= Max
   DO
     BEGIN
@@ -16,13 +16,9 @@ BEGIN
       THEN
         BEGIN
           WRITELN(Multiple);
-          NumDel := Multiple;
-          WHILE NumDel <= Max
+          FOR Index := 2 TO Max DIV Multiple 
           DO
-            BEGIN
-              Sieve := Sieve - [NumDel];
-              NumDel := NumDel + Multiple
-            END;
+              Sieve := Sieve - [Multiple * Index ];
         END;
       Multiple := Multiple + 1
     END;
