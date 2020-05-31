@@ -1,23 +1,22 @@
 PROGRAM Encryption(INPUT, OUTPUT);
-{Переводит символы из INPUT в код согласно Chiper 
-  и печатает новые символы в OUTPUT}
+{ГЏГҐГ°ГҐГўГ®Г¤ГЁГІ Г±ГЁГ¬ГўГ®Г«Г» ГЁГ§ INPUT Гў ГЄГ®Г¤ Г±Г®ГЈГ«Г Г±Г­Г® Chiper 
+  ГЁ ГЇГҐГ·Г ГІГ ГҐГІ Г­Г®ГўГ»ГҐ Г±ГЁГ¬ГўГ®Г«Г» Гў OUTPUT}
 CONST
   Len = 20;
 TYPE
   Str = ARRAY [1 .. Len] OF 'A' .. 'Z';
   Chiper = ARRAY [' ' .. 'Z'] OF CHAR;
-  Length = 1 .. Len;
+  Length = 0 .. Len;
 VAR
   Msg: Str;
   Code: Chiper;
   I: Length;
   CiphFile: TEXT;
-  Error: BOOLEAN;
   
 PROCEDURE Initialize(VAR Code: Chiper);
 VAR
   Letter, EncrLetter: CHAR;
-{Присвоить Code шифр замены}
+{ГЏГ°ГЁГ±ГўГ®ГЁГІГј Code ГёГЁГґГ° Г§Г Г¬ГҐГ­Г»}
 BEGIN {Initialize}
   WHILE NOT EOF(CiphFile)
   DO
@@ -32,49 +31,44 @@ BEGIN {Initialize}
         END;    
       IF Letter IN [' ' .. 'Z']
       THEN
-        Code[Letter] := EncrLetter
-      ELSE
-        Error := TRUE;  
+        Code[Letter] := EncrLetter;  
       READLN(CiphFile)
     END 
 END;  {Initialize}
  
 PROCEDURE Encode(VAR S: Str);
-{Выводит символы из Code, соответствующие символам из S}
+{Г‚Г»ГўГ®Г¤ГЁГІ Г±ГЁГ¬ГўГ®Г«Г» ГЁГ§ Code, Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГ№ГЁГҐ Г±ГЁГ¬ГўГ®Г«Г Г¬ ГЁГ§ S}
 VAR
-  Index: 1 .. Len;
+  Index: Length;
 BEGIN {Encode}
-  FOR Index := 1 TO Len
+  FOR Index := 1 TO I
   DO
     IF S[Index] IN [' ' .. 'Z']
     THEN
-      WRITE(Code[S[Index]])
-    ELSE
-      Error := TRUE; 
+      WRITE(Code[S[Index]]); 
   WRITELN
 END;  {Encode}
  
 BEGIN {Encryption}
-  {Инициализировать Code}
+  {Г€Г­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°Г®ГўГ ГІГј Code}
   ASSIGN(CiphFile, 'CIPHER.TXT');
   RESET(CiphFile);
   Initialize(Code);
   WHILE NOT EOF
   DO
     BEGIN
-      {читать строку в Msg и распечатать ее}
-      I := 1;
+      {Г·ГЁГІГ ГІГј Г±ГІГ°Г®ГЄГі Гў Msg ГЁ Г°Г Г±ГЇГҐГ·Г ГІГ ГІГј ГҐГҐ}
+      I := 0;
       WHILE NOT EOLN AND (I < Len)
       DO
         BEGIN
+          I := I + 1;
           READ(Msg[I]);
           WRITE(Msg[I]);
-          I := I + 1;
         END;
       READLN;
       WRITELN;
-      {распечатать кодированное сообщение}
+      {Г°Г Г±ГЇГҐГ·Г ГІГ ГІГј ГЄГ®Г¤ГЁГ°Г®ГўГ Г­Г­Г®ГҐ Г±Г®Г®ГЎГ№ГҐГ­ГЁГҐ}
       Encode(Msg);
     END
 END.  {Encryption}
-
