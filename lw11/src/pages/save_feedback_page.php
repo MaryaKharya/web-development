@@ -2,14 +2,29 @@
 
 include '../src/common.inc.php';
 
+function getFeedbackId(string $email): array
+{
+    $connection = databaseConnection();
+    $email = $connection->quote($email);
+    $checking = "SELECT * FROM user WHERE email = ${email}";
+    $result = $connection->query($checking)->fetch(PDO::FETCH_ASSOC);
+    if ($result)
+    {
+        $sql = "SELECT id FROM user WHERE email = ${email}";
+        $stmt = $connection->query($sql);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    return[];
+}
+
 function saveFeedback(array $feedback): void
 {
     $connection = databaseConnection();
     $sql = "INSERT INTO user (name, email, country, gender) VALUES ('${feedback['name']}', '${feedback['email']}', '${feedback['country']}', '${feedback['gender']}')";
     $connection->query($sql);
-    $a = getFeedbacks($email);
-    $sqll = "INSERT INTO message (message, user_id) VALUES ('${feedback['message']}', '${insert_id}')";
-    $connection->query($sqll);
+    $insert_id = $connection->lastInsertId();
+    $sql = "INSERT INTO message (message, user_id) VALUES ('${feedback['message']}', '${insert_id}')";
+    $connection->query($sql);
 }
 
 function message(array $feedback): void
@@ -17,8 +32,8 @@ function message(array $feedback): void
     $connection = databaseConnection();
     $email = getPostParameter('email');
     $array = getFeedbackId($email);
-    $sqll = "UPDATE message SET message=CONCAT(message, ' ${feedback['message']}') WHERE user_id=${array['id']}";
-    $connection->query($sqll);
+    $sql = "INSERT INTO message (message, user_id) VALUES ('${feedback['message']}', '${array['id']}')";
+    $connection->query($sql);
 }
 
 function checkingTheForm() 
