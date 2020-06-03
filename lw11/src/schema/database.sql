@@ -18,7 +18,7 @@ CREATE TABLE message
 (
     id              INT AUTO_INCREMENT NOT NULL,
     message         VARCHAR(255)       NOT NULL,
-	user_id         INT                NOT NULL,
+    user_id         INT                NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES user (id)
 ) DEFAULT CHARACTER SET utf8mb4
