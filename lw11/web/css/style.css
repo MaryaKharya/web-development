@@ -375,13 +375,15 @@ h4
     padding-left: 2px;
 }
 
+
 .your_form_answer
 {
     margin: 0 auto;
     max-width: 500px;
-    padding-top: 42px;
+    margin-top: 35px;
     margin-left: 50px;
     display: inline-block;
+    vertical-align: top;
 }
 
 .cell
@@ -439,8 +441,8 @@ h4
 
 .cell_answer
 {
-    width: 480px;
-    height: 35px;
+    width: 420px;
+    height: 100%;
     border-radius: 3px;
     border: 2px solid #c9c9c9;
     font: 400 18px/32px "Open Sans";
@@ -449,7 +451,12 @@ h4
     margin-left: 2px;
     margin-top: 2px;
     margin-bottom: 28px;
-    
+}
+
+.help
+{
+    display: inline-block;
+    vertical-align: top;
 }
 
 .combo_box:hover
@@ -537,8 +544,9 @@ h4
     color: #333333;
     font-family: "Open Sans";
     font-weight: 400;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
+
 
 .radio_button
 {
