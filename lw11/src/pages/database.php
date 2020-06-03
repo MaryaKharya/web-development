@@ -15,28 +15,12 @@ function getFeedback(string $email): array
 {
     $connection = databaseConnection();
     $email = $connection->quote($email);
-    $checking = "SELECT EXISTS (SELECT * FROM user WHERE email = ${email}) AS data";
-    $result = $connection->query($checking)->fetch();
-    if ($result['data'])
+    $checking = "SELECT * FROM user WHERE email = ${email}";
+    $result = $connection->query($checking)->fetch(PDO::FETCH_ASSOC);
+    if ($result)
     {
-        $sql = "SELECT user.name, user.email, user.country, user.gender, message.message FROM message JOIN user ON message.user_id = user.id WHERE user.email = ${email}";
-        $stmt = $connection->query($sql);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    return[];
-}
-
-function getFeedbackId(string $email): array
-{
-    $connection = databaseConnection();
-    $email = $connection->quote($email);
-    $checking = "SELECT EXISTS (SELECT * FROM user WHERE email = ${email}) AS data";
-    $result = $connection->query($checking)->fetch();
-    if ($result['data'])
-    {
-        $sql = "SELECT id FROM user WHERE email = ${email}";
-        $stmt = $connection->query($sql);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $sql = "SELECT user.name, user.email, user.country, user.gender, GROUP_CONCAT(message SEPARATOR '<br>') FROM message INNER JOIN user ON message.user_id = user.id WHERE user.email = ${email}";
+        return $connection->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
     return[];
 }
