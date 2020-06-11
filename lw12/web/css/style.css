@@ -8,7 +8,6 @@ body
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat; 
     background-position: center 50px;
-    display: flex;
 }
 
 .container
@@ -20,14 +19,15 @@ header
 {
     display: flex;
     width: auto;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .menu
 {
-    font: 15px/32px "Georgia";
+    font: 16px/26px "Georgia";
     color: #333333;
     text-decoration: none;
+    text-align: center;
 }
 
 .menu:hover
@@ -37,43 +37,31 @@ header
 
 .about_me_button
 {
-    background: url(../images/about_me_icon.png) no-repeat;
-    background-position: 10px 17px;
-    padding: 9px 22px 9px 45px;
+    padding: 12px 12px ;
 }
 
 .about_me_button:hover
 {
-    background: url(../images/about_me_icon_hover.png) no-repeat;
-    background-position: 10px 17px;
     background-color: #15a98c;
 }
 
 .hobby_button
 {
-    background: url(../images/hobby_icon.png) no-repeat;
-    background-position: 10px 17px;
-    padding: 9px 25px 9px 46px;
+    padding: 12px 12px;
 }
 
 .hobby_button:hover
 {
-    background: url(../images/hobby_icon_hover.png) no-repeat;
-    background-position: 10px 17px;
     background-color: #15a98c;
 }
 
 .video_button
 {
-    background: url(../images/video_icon.png) no-repeat;
-    background-position: 10px 17px;
-    padding: 9px 21px 9px 42px;
+    padding: 12px 12px;
 }
 
 .video_button:hover
-{
-    background: url(../images/video_icon_hover.png) no-repeat;
-    background-position: 10px 17px;
+{   
     background-color: #15a98c;
 }
 
@@ -82,7 +70,6 @@ header
     display: flex;
     flex-direction: column;
     margin-top: 150px;
-    margin-left: 10px;
 }
 
 .sidebar
@@ -242,8 +229,8 @@ h2
     flex-direction: column;
     margin-top: 40px;
     padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 60px;
     background-color: #f9f9f9;
 }
@@ -312,13 +299,13 @@ h4
 {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .write_me
 {
-    padding-top: 13px;
-    padding-left: 50px;
+    text-align: center;
     font: 300 36px/42px "Open Sans";
 }
 
@@ -326,12 +313,11 @@ h4
 .your_form
 {
     margin: 0 auto;
-    padding-left: 5px;
 }
 
 .cell
 {
-    width: 88%;
+    width: 90%;
     height: 43px;
     border-radius: 3px;
     border: 2px solid #c9c9c9;
@@ -350,7 +336,7 @@ h4
 
 .combo_box
 {
-    width: 97%;
+    width: 100%;
     height: 50px;
     border-radius: 3px;
     border: 2px solid #c9c9c9;
@@ -358,9 +344,8 @@ h4
     margin-top: 2px;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
     background: url(../images/arrow_down.png) no-repeat;
-    background-position: 498px 18px;
+    background-position: right 15px center;
     font: 400 18px/32px "Open Sans";
     color: #555555;
     padding-left: 15px;
@@ -397,7 +382,7 @@ h4
 
 .message
 {
-    width: 88%;
+    width: 90%;
     height: 142px;
     margin-left: 1px;
     border-radius: 3px;
@@ -487,7 +472,6 @@ h4
 footer
 {
     background: #f5f5f5;
-    height: 2%;
     margin-top: 48px;
 }
 
@@ -496,14 +480,68 @@ footer
     font: 16px/32px "Georgia";
     color: #555555;
     padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
+    margin: 0;
 }
 
 @media screen and (min-width: 480px) 
 {
+    header
+    {
+        justify-content: center;
+    }
+
     .menu
     {
-        font: 17px/32px "Georgia";
+        font: 14px/32px "Georgia";
+    }
+
+    .about_me_button
+    {
+        background: url(../images/about_me_icon.png) no-repeat;
+        background-position: 21px 16px;
+        padding: 9px 22px 9px 45px;
+    }
+
+    .about_me_button:hover
+    {
+        background: url(../images/about_me_icon_hover.png) no-repeat;
+        background-position: 21px 16px;
+        background-color: #15a98c;
+    }
+
+    .hobby_button
+    {
+        background: url(../images/hobby_icon.png) no-repeat;
+        background-position: 18px 17px;
+        padding: 9px 25px 9px 46px;
+    }
+
+    .hobby_button:hover
+    {
+        background: url(../images/hobby_icon_hover.png) no-repeat;
+        background-position: 18px 17px;
+        background-color: #15a98c;
+    }
+
+    .video_button
+    {
+        background: url(../images/video_icon.png) no-repeat;
+        background-position: 14px 17px;
+        padding: 9px 21px 9px 42px;
+    }
+
+    .video_button:hover
+    {
+        background: url(../images/video_icon_hover.png) no-repeat;
+        background-position: 14px 17px;
+        background-color: #15a98c;
+    }
+
+    .image
+    {
+        max-width: 370px;
     }
 
     .name
@@ -532,11 +570,6 @@ footer
     h4
     {
         font: 800 25px/32px "Open Sans";
-    }
-
-    .write_me
-    {
-        padding-left: 100px;
     }
 
     .footer
@@ -615,7 +648,7 @@ footer
     .about_films
     {
         padding-left: 20px;
-        padding-right: 0;
+        padding-right: 20px;
     }
 
     .film
@@ -636,33 +669,46 @@ footer
 
     .content
     {
-        margin-right: 20px;
         margin-bottom: 50px;
     }
 
     .all_films_button
     {
-        margin-left: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .blank
+    {
+        width: 540px;
+        margin: 0 auto;
     }
 
     .write_me
     {
-        padding-left: 300px;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .cell
     {
-        width: 90%;
+        width: 504px;
+    }
+
+    .combo_box
+    {
+        width: 540px;
     }
 
     .your_form
     {
-        width: 63%;
+        width: 540px;
     }
 
     .message
     {
-        width: 90%;
+        width: 504px;
     }
 }
 
@@ -671,18 +717,25 @@ footer
     body
     {
         margin: 0 auto;
-        display: flex;
-        flex-direction: center;
     }
 
     .background
     {
         background-image: url(../images/background.png);
+        
+    }
+
+    .container
+    {
+        max-width: 1220px;
+        margin: 0 auto;
     }
 
     header
     {
-        margin-left: 140px;
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .menu
@@ -693,19 +746,23 @@ footer
     .main
     {
         margin-top: 209px;
-        margin-left: 120px;
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .image
     {
         width: 330px;
         height: 350px;
+        margin: 0;
     }
 
     .lists
     {
         margin-top: 20px;
         margin-right: -20px;
+        margin-left: 0;
     }
 
     li
@@ -715,7 +772,8 @@ footer
 
     .main_content
     {
-        margin-left: 10px;
+        margin-left: 0;
+        width: 960px;
     }
 
     .quote_and_author
@@ -745,6 +803,16 @@ footer
         margin-top: 10px;
     }
 
+    .about_films
+    {
+        background-color: transparent;
+        padding-left: 0;
+        width: auto;
+        margin-top: 80px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     .help
     {
         flex-direction: row;
@@ -754,30 +822,33 @@ footer
     .film
     {
         flex-direction: column;
+        max-width: 285px;
     }
 
     .photo_film
     {
-        width: 285px;
-        height: 190px;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
     }
 
     .all_films_button
     {
-        margin-top: 150px;
-        margin-left: 480px;
+        margin: auto;
     }
 
     .blank
     {
-        max-width: 75%;
+        max-width: 700px;
         margin: 0 auto;
-        margin-top: 20px;
+        margin-top: 100px;
     }
 
     .write_me
     {
-        margin-left: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
     }
 
 
@@ -787,7 +858,7 @@ footer
         position: absolute;
         width: 200px;
         border-top: 1px solid #4e4e4e;
-        margin-left: -230px;
+        margin-left: -225px;
         margin-top: 24px;
     }
 
@@ -800,26 +871,6 @@ footer
         border-top: 1px solid #4e4e4e;
         margin-left: 25px;
         margin-top: 24px;
-    }
-
-    .your_form
-    {
-        padding-top: 42px;
-    }
-
-    .cell
-    {
-        width: 82%;
-    }
-
-    .combo_box
-    {
-        width: 88%;
-    }
-
-    .message
-    {
-        width: 82%
     }
 
     footer
