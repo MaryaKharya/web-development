@@ -1,18 +1,24 @@
 <?php
 
-function checkingForm($check): array
+function checkingForm()
 {
     $validity = [];
-    $isNameValidate = preg_match("/^[a-zа-я]+[a-zа-я\s\-]*$/ui", $check['name']);
-    $isEmailValidate = filter_var($check['email'], FILTER_VALIDATE_EMAIL);
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+    $isNameValidate = preg_match("/^[a-zа-я]+[a-zа-я\s\-]*$/ui", $name);
+    $isEmailValidate = filter_var($email, FILTER_VALIDATE_EMAIL);
 
     if (!$isNameValidate) {
-        $validity['name'] = true;
+        $validity['name'] = false;
     }
     if (!$isEmailValidate) {
-        $validity['email'] = true;
+        $validity['email'] = false;
     }
-    if ($isNameValidate && $isEmailValidate)
+    if (empty($message)) {
+        $validity['message'] = false;
+    }
+    if ($isNameValidate && $isEmailValidate && !(empty($message)))
     {
         $validity['success'] = true;
     }
@@ -20,12 +26,8 @@ function checkingForm($check): array
 }
 function sendForm(): void
 {
-    $check = file_get_contents('php://input');
-    $check = json_decode($check, true);
-    $validity = checkingForm($check);
-    $validity = json_encode($validity);
+    $validity = json_encode(checkingForm());
     echo $validity;
 }
 
 sendForm();
-
