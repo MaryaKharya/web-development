@@ -1,59 +1,49 @@
 async function sendData() {
-    event.preventDefault();
+  event.preventDefault();
+  const form = document.getElementById('form');
+  const response = await fetch('src/saveform.php', {
+    method: 'POST',
+    body: new FormData(form)
+  });
+  const validity = await response.json();
+  const successMessage = document.getElementById('success');
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
 
-    let form = document.getElementById('form');
-    let name = form.elements.name;
-    let email = form.elements.email;
-    let gender = "male";
-    if (form.elements.gender.value === "female") {
-        gender = "female";
-    }
-    let check = {
-        "name": name.value,
-        "email": email.value,
-        "country": form.elements.country.value,
-        "gender": gender,
-        "message": form.elements.message.value
-    };
-
-    const response = await fetch('http://localhost:8080/src/saveform.php', {
-        method: 'POST',
-        body: JSON.stringify(check)
-    });
-
-    function addRedBorder(validity) {
-        for (let inputId of Object.keys(validity)) {
-            if (validity[inputId] === true) {
-                let invalidInput = document.getElementById(inputId);
-                invalidInput.classList.add('red');
-            }
+  if (response.ok) {
+    if (validity['success']) {
+      successMessage.classList.add('show_message');
+    } else {
+        for (let input of Object.keys(validity)) {
+          let invalidInput = document.getElementById(input);
+          if (validity[input] === false) {
+            invalidInput.classList.add('red');
+          }
         }
-    }
-    
-    function removeRedBorder() {
-        let inputsRedBorder = document.querySelectorAll('.red');
-        for (let input of inputsRedBorder) {
-            input.classList.remove('red');
-        }
-    }
-
-    if (response.ok) {
-        const validity = await response.json();
-        if (validity['success']) {
-            let successMessage = document.getElementById('success');
-            successMessage.classList.add('show_message');
-            removeRedBorder();
-        } else {
-            addRedBorder(validity);
+          successMessage.classList.remove('show_message');
         }
     } else {
         alert('Ошибка' + response.status);
     }
+
+    name.addEventListener('click', function(){
+      name.classList.remove('red');
+    });
+
+    email.addEventListener('click', function(){
+      email.classList.remove('red');
+    });
+
+    message.addEventListener('click', function(){
+      message.classList.remove('red');
+    });
+
 }
 
 function run() {
-    let form = document.getElementById('form');
-    form.addEventListener('submit', sendData);
+  let form = document.getElementById('form');
+  form.addEventListener('submit', sendData); 
 }
 
 window.onload = run;
