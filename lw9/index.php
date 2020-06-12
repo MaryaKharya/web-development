@@ -193,9 +193,9 @@
             <label class="label_design">Ваше имя<span class="snowflake"> *</span></label>
             <input class="cell isValidate" type="text" id="name" name="name" required /> <br />
             <label class="label_design">Ваш email<span class="snowflake"> *</span></label>
-              <input class="cell isValidate" id="email" type="text" name="email" value="" required /> <br />
-              <label class="label_design">Откуда вы?</label>
-              <select class="combo_box" id="country" name="country"> 
+            <input class="cell isValidate" id="email" type="text" name="email" value="" required /> <br />
+            <label class="label_design">Откуда вы?</label>
+            <select class="combo_box" id="country" name="country"> 
               <option>Россия</option>
               <option>США</option>
               <option>Великобритания</option>
@@ -222,11 +222,11 @@
             <label class="label_design">Ваше сообщение<span class="snowflake"> *</span></label>
             <textarea  id="message" class="message" name="message"></textarea> <br />
             <input type="submit" class="send" value="Отправить" />
-		    <p class="success" id="success">Ваше сообщение успешно отправлено</p>	
+            <p class="success" id="success">Ваше сообщение успешно отправлено</p>	
           </form>
         </div>
         <script src="js/carousel.js"></script>
-		<script src="js/ajax.js" defer></script>
+        <script src="js/ajax.js" defer></script>
       </article>
       <footer>
         <p class="footer"> © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО <q>ПГТУ</q></p>
