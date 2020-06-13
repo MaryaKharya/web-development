@@ -1,7 +1,7 @@
 body
 {
     margin: 0 auto;
-    min-width: 360px;
+    min-width: 340px;
 }
 
 .background
@@ -29,6 +29,7 @@ header
     color: #333333;
     text-decoration: none;
     text-align: center;
+    background-color: #ffffff; 
 }
 
 .menu:hover
@@ -95,7 +96,7 @@ header
 
 .title_list
 {
-    font: 600 22px/32px "Open Sans";
+    font: 600 22px/32px "Open Sans", sans-serif, sans-serif;
     color: #15a98c;
     margin-left: -1px;
 }
@@ -149,7 +150,7 @@ ol
 .author
 {
     color: #333333;
-    font: 600 16px/42px "Open Sans";
+    font: 600 16px/42px "Open Sans", sans-serif;
     margin-top: -25px;
     margin-left: 15px;
 }
@@ -162,7 +163,7 @@ h1
 .name
 {
 
-    font: 700 32px "Open Sans";
+    font: 700 32px "Open Sans", sans-serif;
     color: #333333;
     margin-left: -5px;
     margin-top: 30px;
@@ -186,7 +187,7 @@ h1
 
 h2
 {
-    font: 400 36px/42px "Open Sans";
+    font: 400 36px/42px "Open Sans", sans-serif;
     color: #333333;
 }
 
@@ -229,7 +230,10 @@ h2
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-    padding: 5px 20px 60px 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
     background-color: #f9f9f9;
 }
 
@@ -266,7 +270,7 @@ h2
 
 h4
 {
-    font: 700 22px/32px "Open Sans";
+    font: 700 22px/32px "Open Sans", sans-serif;
     color: #333333;
 }
 
@@ -304,7 +308,7 @@ h4
 .write_me
 {
     text-align: center;
-    font: 300 36px/42px "Open Sans";
+    font: 300 36px/42px "Open Sans", sans-serif;
 }
 
 
@@ -319,7 +323,7 @@ h4
     height: 43px;
     border-radius: 3px;
     border: 2px solid #c9c9c9;
-    font: 400 18px/32px "Open Sans";
+    font: 400 18px/32px "Open Sans", sans-serif;
     padding-left: 17px;
     padding-right: 17px;
     margin-left: 2px;
@@ -344,7 +348,7 @@ h4
     -moz-appearance: none;
     background: url(../images/arrow_down.png) no-repeat;
     background-position: right 15px center;
-    font: 400 18px/32px "Open Sans";
+    font: 400 18px/32px "Open Sans", sans-serif;
     color: #555555;
     padding-left: 15px;
     padding-bottom: 3px;
@@ -387,7 +391,7 @@ h4
     border: 2px solid #c9c9c9;
     resize: none;
     margin-top: 4px;
-    font: 400 18px/32px "Open Sans";
+    font: 400 18px/32px "Open Sans", sans-serif;
     color: #555555;
     padding-left: 17px;
     padding-right: 17px;
@@ -438,7 +442,7 @@ h4
     font-size: 20px;
     line-height: 32px;
     color: #333333;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     margin-left: 2px;
 }
@@ -453,7 +457,7 @@ h4
     font-size: 18px;
     line-height: 32px;
     color: #333333;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     margin-right: 30px;
     margin-left: 2px;
@@ -480,7 +484,8 @@ footer
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 @media screen and (min-width: 480px) 
@@ -544,7 +549,7 @@ footer
 
     .name
     {
-        font: 700 38px "Open Sans";
+        font: 700 38px "Open Sans", sans-serif;
     }
 
     .quote_and_author
@@ -567,7 +572,7 @@ footer
 
     h4
     {
-        font: 800 25px/32px "Open Sans";
+        font: 800 25px/32px "Open Sans", sans-serif;
     }
 
     .footer
@@ -628,7 +633,7 @@ footer
 
     .name
     {
-        font: 700 34px "Open Sans";
+        font: 700 34px "Open Sans", sans-serif;
         margin-top: 90px;
         order: 1;
     }
@@ -787,7 +792,7 @@ footer
 
     .name
     {
-        font: 700 48px "Open Sans";
+        font: 700 48px "Open Sans", sans-serif;
         margin-top: 95px;
     }
 
@@ -805,10 +810,10 @@ footer
     {
         background-color: transparent;
         padding-left: 0;
+        padding-right: 0;
         width: auto;
         margin-top: 80px;
         margin-left: 10px;
-        margin-right: 10px;
     }
 
     .help
@@ -821,6 +826,8 @@ footer
     {
         flex-direction: column;
         max-width: 285px;
+        margin-right: 10px;
+
     }
 
     .photo_film
