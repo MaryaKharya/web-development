@@ -127,21 +127,21 @@
               <input class="cell" type="text" name="email" value="<?php echo $args['email'] ?? ""; ?>" /> <br />
               <label class="label_design">Откуда вы?</label>
               <select class="combo_box" name="country"> 
-                <option>Россия</option>
-                <option>США</option>
-                <option>Великобритания</option>
-                <option>Германия</option>
-                <option>Франция</option>
-                <option>Италия</option>
-                <option>Испания</option>
-                <option>Украина</option>
-                <option>Беларусь</option>
-                <option>Казахстан</option>
-                <option>КНР</option>
-                <option>Япония</option>
-                <option>Республика Корея</option>
-                <option>Автралия</option>
-                <option>Бразилия</option>
+                <option value="Россия">Россия</option>
+                <option value="США">США</option>
+                <option value="Великобритания">Великобритания</option>
+                <option value="Германия">Германия</option>
+                <option value="Франция">Франция</option>
+                <option value="Италия">Италия</option>
+                <option value="Испания">Испания</option>
+                <option value="Украина">Украина</option>
+                <option value="Беларусь">Беларусь</option>
+                <option value="Казахстан">Казахстан</option>
+                <option value="КНР">КНР</option>
+                <option value="Япония">Япония</option>
+                <option value="Республика Корея">Республика Корея</option>
+                <option value="Автралия">Автралия</option>
+                <option value="Бразилия">Бразилия</option>
               </select><br/>
               <label class="label_design">Ваш пол</label><br />
                 <div class="gender_choice">
