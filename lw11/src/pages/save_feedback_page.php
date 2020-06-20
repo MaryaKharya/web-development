@@ -47,7 +47,7 @@ function checkingTheForm()
         }
         else 
         {
-            message($feedback);
+            saveMessage($feedback);
             $feedback['send'] = 'Сообщение добавлено!';
         }
     }
