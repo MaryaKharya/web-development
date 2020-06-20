@@ -4,8 +4,8 @@ function checkingForm()
 {
     $validity = [];
     $name = (isset($_POST['name'])) ? $_POST['name'] : '';
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+    $email = (isset($_POST['email'])) ? $_POST['email'] : '';
+    $message = (isset($_POST['message'])) ? $_POST['message'] : '';
 
     $isNameValidate = preg_match("/^[a-zа-я]+[a-zа-я\s\-]*$/ui", $name);
     $isEmailValidate = filter_var($email, FILTER_VALIDATE_EMAIL);
