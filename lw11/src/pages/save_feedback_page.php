@@ -2,16 +2,6 @@
 
 include '../src/common.inc.php';
 
-
-function message(array $feedback): void
-{
-    $connection = databaseConnection();
-    $email = getPostParameter('email');
-    $array = getFeedbackId($email);
-    $sql = "INSERT INTO message (message, user_id) VALUES ('${feedback['message']}', '${array['id']}')";
-    $connection->query($sql);
-}
-
 function checkingTheForm() 
 {
     $feedback = [];
