@@ -1,4 +1,4 @@
-async function sendData() {
+async function sendData(event) {
   event.preventDefault();
   const form = document.getElementById('form');
   const response = await fetch('src/saveform.php', {
