@@ -7,20 +7,11 @@ function getParameter(string $text): ?string
 
 function showData() 
 {
-    $firstname = getParameter('first_name');
-    $lastname = getParameter('last_name');
     $email = getParameter('email');
-    $age = getParameter('age');
-    if (!is_dir("data") && ($email))
-    {
-        mkdir("data");
-    }
 
     if ($email)
     {
-        $data = "$firstname $lastname $email $age";
         $file = "data/$email.txt";
-        file_put_contents($file, $data);
     }
 
     if (!(file_exists($file)))
@@ -39,5 +30,3 @@ function showData()
         }
     }
 }
-
-showData(); 
