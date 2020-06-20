@@ -16,7 +16,7 @@ function showData()
 
     if (!(file_exists($file)))
     {
-        echo 'email не введен';
+        echo 'email не существует';
     }
     else
     {
@@ -30,3 +30,5 @@ function showData()
         }
     }
 }
+
+showData(); 
