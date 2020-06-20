@@ -7,10 +7,10 @@ function getParameter(string $text): ?string
 
 function showData() 
 {
-    $firstname = GETParameter('first_name');
-    $lastname = GETParameter('last_name');
-    $email = GETParameter('email');
-    $age = GETParameter('age');
+    $firstname = getParameter('first_name');
+    $lastname = getParameter('last_name');
+    $email = getParameter('email');
+    $age = getParameter('age');
     if (!is_dir("data") && ($email))
     {
         mkdir("data");
